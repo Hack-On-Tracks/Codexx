@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>SkySnR Vision — AI Drone Emergency Rescue Platform</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=Space+Grotesk:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"tertiary-fixed-dim":"#e4c289","on-tertiary-container":"#fffbff","on-tertiary":"#ffffff","on-surface":"#141e16","tertiary":"#715829","primary-container":"#a0674e","inverse-primary":"#fcb799","surface-bright":"#f0fdef","tertiary-container":"#8c703f","secondary":"#54615d","on-primary":"#ffffff","outline":"#84746d","secondary-container":"#d7e6e0","surface":"#f0fdef","on-tertiary-fixed-variant":"#5a4316","on-primary-fixed-variant":"#6a3a24","surface-container-high":"#dfebdf","on-primary-container":"#fffbff","on-primary-fixed":"#351001","on-secondary-fixed":"#111e1a","error":"#ba1a1a","on-tertiary-fixed":"#271900","on-error-container":"#93000a","on-secondary-fixed-variant":"#3c4a45","surface-dim":"#d1ddd1","background":"#f0fdef","tertiary-fixed":"#ffdea9","secondary-fixed-dim":"#bbcac4","primary":"#834f37","inverse-on-surface":"#e8f4e7","on-background":"#141e16","surface-container":"#e5f1e4","surface-container-highest":"#dae6d9","primary-fixed":"#ffdbcd","on-secondary":"#ffffff","surface-variant":"#dae6d9","surface-tint":"#86513a","surface-container-lowest":"#ffffff","on-surface-variant":"#52443e","surface-container-low":"#ebf7ea","on-secondary-container":"#596762","outline-variant":"#d7c2bb","on-error":"#ffffff","error-container":"#ffdad6","inverse-surface":"#28332a","secondary-fixed":"#d7e6e0","primary-fixed-dim":"#fcb799"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"space-md":"1rem","space-lg":"1.5rem","space-xl":"2.5rem","margin":"1rem","gutter-desktop":"1.5rem","space-xs":"0.25rem","margin-desktop":"2rem","gutter":"1rem","space-sm":"0.5rem"},fontFamily:{"headline-md":["Space Grotesk"],"display-hero-mobile":["Space Grotesk"],"data-metric":["Space Grotesk"],"headline-sm":["Space Grotesk"],"label-telemetry-lg":["Space Grotesk"],"body-lg":["Manrope"],"headline-lg-mobile":["Space Grotesk"],"display-hero":["Space Grotesk"],"label-telemetry-sm":["Space Grotesk"],"headline-lg":["Space Grotesk"],"body-sm":["Manrope"],"body-md":["Manrope"]},fontSize:{"headline-md":["22px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"display-hero-mobile":["32px",{"lineHeight":"38px","letterSpacing":"-0.02em","fontWeight":"700"}],"data-metric":["28px",{"lineHeight":"32px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-sm":["18px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"600"}],"label-telemetry-lg":["14px",{"lineHeight":"18px","letterSpacing":"0.06em","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"500"}],"headline-lg-mobile":["24px",{"lineHeight":"30px","letterSpacing":"-0.01em","fontWeight":"600"}],"display-hero":["48px",{"lineHeight":"52px","letterSpacing":"-0.03em","fontWeight":"700"}],"label-telemetry-sm":["10px",{"lineHeight":"14px","letterSpacing":"0.08em","fontWeight":"700"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"400"}],"body-md":["14px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"400"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface"><header class="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-24 w-full px-gutter-desktop mx-auto flex flex-col justify-between pt-space-xs"><div class="flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md"><img alt="SkySnR Vision Master Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UJ4FfRNmjS6q6cyQ-T84k3q8RpP3BrwvicwtLvbIId-8TzW2oKUYfZZY89YJlKopuADvuK1594N1ljdCtDMbFhMRT5ODHLAJGfXn5ftV3s3AvUs5Npfg41OKJwFJq5REIj5ZVryHnN7N0gLaH9vF7H-gEj_h_ZgRJ6eve9ynXfriHbl2J4lF3xljniukPqnLIgCYP9piFDEkka3ZHtQEMgzE_JUYplgQsXlGQP3SezrrXghr0OR5NqFA"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm uppercase tracking-wider text-on-surface">SkySnR Vision</span><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-tertiary-container animate-pulse"></span><span class="font-label-telemetry-sm text-label-telemetry-sm uppercase text-on-surface-variant tracking-widest">SYS: ONLINE // RESCUE NET ACTIVE</span></div></div></div><nav class="hidden xl:flex items-center gap-space-xs px-space-xs py-1 bg-surface-container rounded-lg" data-active-classes="bg-secondary-container text-on-secondary-fixed font-semibold rounded-lg"><a class="px-3 py-1.5 font-label-telemetry-lg text-label-telemetry-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors rounded" data-path="overview-landing" href="#">Overview / Landing</a><a class="px-3 py-1.5 font-label-telemetry-lg text-label-telemetry-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors rounded" data-path="ops-command-mission-control" href="#">Ops Command &amp; Mission Control</a><a class="px-3 py-1.5 font-label-telemetry-lg text-label-telemetry-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors rounded" data-path="terrain-aerial-ai" href="#">Terrain &amp; Aerial AI</a><a class="px-3 py-1.5 font-label-telemetry-lg text-label-telemetry-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors rounded" data-path="fleet-telemetry" href="#">Fleet Telemetry</a><a class="px-3 py-1.5 font-label-telemetry-lg text-label-telemetry-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors rounded" data-path="protocols" href="#">Protocols</a></nav><div class="flex items-center gap-space-sm"><div class="hidden md:flex items-center bg-surface-container-high p-0.5 rounded-full"><button class="px-2.5 py-1 rounded-full font-label-telemetry-sm text-label-telemetry-sm bg-primary text-on-primary transition-all" type="button">Admin</button><button class="px-2.5 py-1 rounded-full font-label-telemetry-sm text-label-telemetry-sm text-on-surface-variant hover:text-on-surface transition-all" type="button">Ops Mgr</button><button class="px-2.5 py-1 rounded-full font-label-telemetry-sm text-label-telemetry-sm text-on-surface-variant hover:text-on-surface transition-all" type="button">Field Team</button></div><div class="flex items-center gap-space-xs px-2.5 py-1 bg-primary text-on-primary rounded-lg"><span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed animate-ping"></span><span class="font-label-telemetry-sm text-label-telemetry-sm tracking-wider uppercase">OP-792: ALPINE SEARCH</span></div><button class="relative p-1.5 rounded-lg bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-body-lg">notifications</span><span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-primary"></span></button><div class="flex items-center gap-space-xs pl-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-primary-container" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_uMhgF1XYpjckWZRpeSl1lyXhLaECzsKqBznE1fI7bjMbHtbYD9tlrSI2Eunlu4HezFXStbc54ss8UPkq_KOiya576n6EzQsX6z_eKbEjfoXttMe7SmqsLb5-dY2pSz2fTSa9JIUG7nG403Qtpu51tij-9HtEfQpO-ySgaHPkzrC0WW-xj2Vp6lcz9vWq1so-R1wvSDmg5WxGHYnpbRmmwmhauHHQEfNiai7mrdByQQ3SUI-gMDAB"/><div class="hidden 2xl:flex flex-col text-left"><span class="font-label-telemetry-sm text-label-telemetry-sm uppercase font-bold text-on-surface">Cmdr. Vance</span><span class="font-label-telemetry-sm text-label-telemetry-sm text-on-surface-variant">SAR-DIV-04</span></div></div></div></div><div class="h-7 w-full flex items-center justify-between px-space-xs bg-surface-container-high rounded"><div class="flex items-center gap-space-md"><span class="font-label-telemetry-sm text-label-telemetry-sm uppercase text-on-surface-variant">UTC <span class="font-headline-sm text-label-telemetry-sm text-primary">14:38:22Z</span></span><span class="text-outline-variant font-label-telemetry-sm text-label-telemetry-sm">|</span><span class="font-label-telemetry-sm text-label-telemetry-sm uppercase text-on-surface-variant">SORTIES <span class="font-headline-sm text-label-telemetry-sm text-tertiary-container">14 AIRBORNE</span></span><span class="text-outline-variant font-label-telemetry-sm text-label-telemetry-sm">|</span><span class="font-label-telemetry-sm text-label-telemetry-sm uppercase text-on-surface-variant">TRIANGULATION <span class="font-headline-sm text-label-telemetry-sm text-on-surface">94.8% COV</span></span></div><div class="flex items-center gap-space-md"><span class="font-label-telemetry-sm text-label-telemetry-sm uppercase text-on-surface-variant">BARO <span class="font-headline-sm text-label-telemetry-sm text-on-surface">1018.4 hPa</span></span><span class="text-outline-variant font-label-telemetry-sm text-label-telemetry-sm">|</span><span class="font-label-telemetry-sm text-label-telemetry-sm uppercase text-on-surface-variant">WIND <span class="font-headline-sm text-label-telemetry-sm text-on-surface">16KT NNW</span></span><span class="text-outline-variant font-label-telemetry-sm text-label-telemetry-sm">|</span><span class="font-label-telemetry-sm text-label-telemetry-sm uppercase text-primary font-bold">SECURE MESH ACTIVE</span></div></div></div></header><main class="w-full pt-24 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- SECTION: HERO (Desktop 80% Viewport Focus) -->
+<section class="relative w-full px-gutter md:px-margin-desktop py-space-xl overflow-hidden">
+<!-- Subtle Ambient Gradient Backdrop using pure 5-color palette -->
+<div class="absolute inset-0 pointer-events-none bg-gradient-to-b from-surface-container via-surface to-surface-container-low opacity-60"></div>
+<div class="relative w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
+<!-- Left Column: Typography & Action Prompts -->
+<div class="lg:col-span-6 flex flex-col justify-center space-y-space-lg z-10">
+<!-- Eyebrow Badge -->
+<div class="inline-flex items-center gap-space-sm px-3 py-1.5 rounded-full bg-surface-container-high w-fit shadow-sm">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary-container animate-pulse"></span>
+<span class="font-label-telemetry-lg text-label-telemetry-lg uppercase tracking-wider text-tertiary">
+            Aerial Intelligence for Critical Response
+          </span>
+</div>
+<!-- Main Headline -->
+<h1 class="font-display-hero text-display-hero-mobile lg:text-display-hero text-secondary leading-tight tracking-tight">
+          Every Second Matters. <br/>
+<span class="text-primary">Every Detection Counts.</span>
+</h1>
+<!-- Short Description -->
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl leading-relaxed">
+          Turn drone imagery into explainable rescue priorities and coordinated emergency response.
+        </p>
+<!-- CTA Cluster -->
+<div class="flex flex-wrap items-center gap-space-md pt-space-xs">
+<a class="inline-flex items-center justify-center px-space-lg py-3 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-headline-sm text-headline-sm transition-all shadow-md group" href="#">
+<span>Launch SkySnR Vision</span>
+<span class="material-symbols-outlined ml-2 transition-transform group-hover:translate-x-1">arrow_forward</span>
+</a>
+<a class="inline-flex items-center justify-center px-space-lg py-3 rounded-lg bg-secondary-container hover:bg-surface-container-high text-on-secondary-fixed-variant font-headline-sm text-headline-sm transition-all shadow-sm" href="#capabilities">
+<span>Explore Capabilities</span>
+</a>
+</div>
+<!-- Swiss Monoline Metadata Strip -->
+<div class="pt-space-md grid grid-cols-3 gap-space-md">
+<div class="p-3 bg-surface-container rounded-lg shadow-sm">
+<span class="block font-label-telemetry-sm text-label-telemetry-sm uppercase text-secondary">Sensor Stream</span>
+<span class="font-headline-sm text-headline-sm text-tertiary">RGB + LWIR</span>
+</div>
+<div class="p-3 bg-surface-container rounded-lg shadow-sm">
+<span class="block font-label-telemetry-sm text-label-telemetry-sm uppercase text-secondary">Target Ingestion</span>
+<span class="font-headline-sm text-headline-sm text-primary">Sub-Second</span>
+</div>
+<div class="p-3 bg-surface-container rounded-lg shadow-sm">
+<span class="block font-label-telemetry-sm text-label-telemetry-sm uppercase text-secondary">Deployment</span>
+<span class="font-headline-sm text-headline-sm text-secondary">Ground Sync</span>
+</div>
+</div>
+</div>
+<!-- Right Column: 3D Scene Centerpiece with Floating Telemetry HUD -->
+<div class="lg:col-span-6 relative w-full flex items-center justify-center">
+<!-- Floating Ambient Glow Filter strictly within 5-color tone -->
+<div class="absolute -inset-4 bg-tertiary-fixed-dim rounded-full opacity-20 blur-3xl pointer-events-none"></div>
+<div class="relative w-full rounded-2xl overflow-hidden bg-surface-container-high shadow-xl p-1">
+<!-- Interactive 3D Scene Container -->
+<!-- STITCH_THREEJS_START:ANIMATION_13 class="w-full h-[540px] lg:h-[620px] rounded-xl overflow-hidden bg-transparent block" -->
+<div class="w-full h-[540px] lg:h-[620px] rounded-xl overflow-hidden bg-transparent block" style="display:block;">
+<script src="https://ajax.googleapis.com/ajax/libs/threejs/r125/three.min.js"></script>
+<div id="threejs-container-ANIMATION_13" style="width:100%;height:100%"></div>
+<script>
+(function() {
+  const container = document.getElementById('threejs-container-ANIMATION_13');
+  const devicePixelRatio = window.devicePixelRatio || 1;
+  // SkySnR Vision - Cinematic 3D Autonomous Rescue Drone & Sculpted Mountain Terrain
+// Mandatory 5-color palette:
+// Balsam Green: 0x65736E (#65736E)
+// Applegate Sage: 0xADB9AD (#ADB9AD)
+// Artemis Mustard: 0xD0AF78 (#D0AF78)
+// Dusty Coral: 0xD0A08D (#D0A08D)
+// Warm Terracotta: 0xB4785E (#B4785E)
+
+const width = container.clientWidth || window.innerWidth;
+const height = container.clientHeight || window.innerHeight;
+
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(42, width / height, 0.1, 1000);
+camera.position.set(0, 16, 38);
+camera.lookAt(0, 3, 0);
+
+const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true, powerPreference: "high-performance" });
+renderer.setSize(width, height);
+renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+renderer.shadowMap.enabled = true;
+renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+container.appendChild(renderer.domElement);
+
+// Lighting setup
+const ambientLight = new THREE.AmbientLight(0xADB9AD, 0.9);
+scene.add(ambientLight);
+
+const sunLight = new THREE.DirectionalLight(0xD0AF78, 1.8);
+sunLight.position.set(25, 45, 25);
+sunLight.castShadow = true;
+sunLight.shadow.mapSize.width = 1024;
+sunLight.shadow.mapSize.height = 1024;
+sunLight.shadow.bias = -0.001;
+scene.add(sunLight);
+
+const fillRim = new THREE.DirectionalLight(0x65736E, 0.9);
+fillRim.position.set(-25, 20, -15);
+scene.add(fillRim);
+
+const warmAccentLight = new THREE.PointLight(0xB4785E, 1.5, 40);
+warmAccentLight.position.set(0, 5, 8);
+scene.add(warmAccentLight);
+
+// 1. Sculpted Topographic Mountain Terrain with Ridges & Glacial Crevasses
+const terrainGeo = new THREE.PlaneGeometry(80, 80, 80, 80);
+terrainGeo.rotateX(-Math.PI / 2);
+terrainGeo.translate(0, -6.5, 0);
+
+const pos = terrainGeo.attributes.position;
+for (let i = 0; i < pos.count; i++) {
+  const x = pos.getX(i);
+  const z = pos.getZ(i);
+  // Tiered alpine ridge & crevasse contours
+  let y = Math.sin(x * 0.11) * Math.cos(z * 0.11) * 4.8;
+  y += Math.sin(x * 0.04 + 1.2) * Math.sin(z * 0.05) * 3.2;
+  y += Math.cos(x * 0.22) * Math.sin(z * 0.18) * 1.1;
+
+  // Central search zone depression / canyon
+  const distCenter = Math.sqrt(x * x * 0.5 + z * z);
+  if (distCenter < 14) {
+    y -= (14 - distCenter) * 0.42;
+  }
+  pos.setY(i, y);
+}
+terrainGeo.computeVertexNormals();
+
+const terrainMat = new THREE.MeshLambertMaterial({
+  color: 0x65736E,
+  roughness: 0.85,
+  transparent: true,
+  opacity: 0.96
+});
+const terrainMesh = new THREE.Mesh(terrainGeo, terrainMat);
+terrainMesh.receiveShadow = true;
+scene.add(terrainMesh);
+
+// Layered Topographic Wireframe Contour overlay
+const wireMat = new THREE.MeshBasicMaterial({
+  color: 0xADB9AD,
+  wireframe: true,
+  transparent: true,
+  opacity: 0.38
+});
+const wireMesh = new THREE.Mesh(terrainGeo, wireMat);
+wireMesh.position.y += 0.06;
+scene.add(wireMesh);
+
+// 2. High-Precision Realistic 3D Rescue Drone
+const drone = new THREE.Group();
+drone.position.set(0, 7.5, 5);
+
+const chGrey = new THREE.MeshStandardMaterial({ color: 0xADB9AD, roughness: 0.25, metalness: 0.15 });
+const darkBalsam = new THREE.MeshStandardMaterial({ color: 0x65736E, roughness: 0.45, metalness: 0.1 });
+const terraMat = new THREE.MeshLambertMaterial({ color: 0xB4785E });
+const mustardMat = new THREE.MeshLambertMaterial({ color: 0xD0AF78 });
+const coralMat = new THREE.MeshLambertMaterial({ color: 0xD0A08D });
+
+// Main Fuselage & Avionics Core
+const chassis = new THREE.Mesh(new THREE.BoxGeometry(3.6, 0.9, 4.8), chGrey);
+chassis.castShadow = true;
+drone.add(chassis);
+
+const aerodome = new THREE.Mesh(new THREE.CylinderGeometry(1.1, 1.4, 0.65, 18), darkBalsam);
+aerodome.position.set(0, 0.62, -0.4);
+drone.add(aerodome);
+
+// Multi-spectral Optical & FLIR Gimbal Turret (Lower Bow)
+const gimbalMount = new THREE.Mesh(new THREE.CylinderGeometry(0.5, 0.5, 0.4, 16), darkBalsam);
+gimbalMount.position.set(0, -0.55, 1.6);
+drone.add(gimbalMount);
+
+const flirSphere = new THREE.Mesh(new THREE.SphereGeometry(0.8, 20, 20), terraMat);
+flirSphere.position.set(0, -0.9, 1.6);
+drone.add(flirSphere);
+
+const lensTorus = new THREE.Mesh(new THREE.TorusGeometry(0.42, 0.09, 10, 24), mustardMat);
+lensTorus.position.set(0, -0.92, 2.3);
+drone.add(lensTorus);
+
+// 4 High-Strength Carbon Rotor Arms & Motor Nacelles
+const rotors = [];
+const armGeo = new THREE.CylinderGeometry(0.14, 0.14, 4.6, 8);
+const bladeGeo = new THREE.BoxGeometry(3.4, 0.04, 0.32);
+
+const configs = [
+  { x: 2.5, z: 2.5, rotY: Math.PI / 4 },
+  { x: -2.5, z: 2.5, rotY: -Math.PI / 4 },
+  { x: 2.5, z: -2.5, rotY: -Math.PI / 4 },
+  { x: -2.5, z: -2.5, rotY: Math.PI / 4 }
+];
+
+configs.forEach(cfg => {
+  const arm = new THREE.Mesh(armGeo, darkBalsam);
+  arm.rotation.z = Math.PI / 2;
+  arm.rotation.y = cfg.rotY;
+  arm.position.set(cfg.x * 0.52, 0.12, cfg.z * 0.52);
+  drone.add(arm);
+
+  const motor = new THREE.Mesh(new THREE.CylinderGeometry(0.48, 0.48, 0.6, 16), terraMat);
+  motor.position.set(cfg.x, 0.3, cfg.z);
+  motor.castShadow = true;
+  drone.add(motor);
+
+  const blade = new THREE.Mesh(bladeGeo, mustardMat);
+  blade.position.set(cfg.x, 0.65, cfg.z);
+  blade.castShadow = true;
+  drone.add(blade);
+  rotors.push(blade);
+});
+
+scene.add(drone);
+
+// 3. Elegant Concentric Tactical Scanning Rings (Hover projection)
+const ringGeo1 = new THREE.RingGeometry(2.8, 3.05, 48);
+ringGeo1.rotateX(-Math.PI / 2);
+const ringMat1 = new THREE.MeshBasicMaterial({ color: 0xD0AF78, transparent: true, opacity: 0.65, side: THREE.DoubleSide });
+const scanRing1 = new THREE.Mesh(ringGeo1, ringMat1);
+scanRing1.position.set(0, -4.8, 5);
+scene.add(scanRing1);
+
+const ringGeo2 = new THREE.RingGeometry(5.4, 5.7, 48);
+ringGeo2.rotateX(-Math.PI / 2);
+const ringMat2 = new THREE.MeshBasicMaterial({ color: 0xD0A08D, transparent: true, opacity: 0.45, side: THREE.DoubleSide });
+const scanRing2 = new THREE.Mesh(ringGeo2, ringMat2);
+scanRing2.position.set(0, -5.1, 5);
+scene.add(scanRing2);
+
+// 4. Floating 3D Tactical Detection Markers with Raycasts
+const markerGroup = new THREE.Group();
+
+function makeMarker(x, y, z, colorHex) {
+  const g = new THREE.Group();
+  g.position.set(x, y, z);
+
+  const diamond = new THREE.Mesh(new THREE.OctahedronGeometry(0.65, 0), new THREE.MeshBasicMaterial({ color: colorHex, wireframe: true }));
+  g.add(diamond);
+
+  const core = new THREE.Mesh(new THREE.SphereGeometry(0.28, 12, 12), new THREE.MeshLambertMaterial({ color: colorHex }));
+  g.add(core);
+
+  const rayGeo = new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(0, 0, 0), new THREE.Vector3(0, -5.2, 0)]);
+  const rayMat = new THREE.LineDashedMaterial({ color: colorHex, dashSize: 0.5, gapSize: 0.25, transparent: true, opacity: 0.65 });
+  const ray = new THREE.Line(rayGeo, rayMat);
+  ray.computeLineDistances();
+  g.add(ray);
+
+  return g;
+}
+
+const marker1 = makeMarker(-7.5, -0.2, 4.5, 0xB4785E); // Survivor Hotspot
+const marker2 = makeMarker(8.5, 1.4, 1.8, 0xD0AF78);  // Vehicle Traverse
+const marker3 = makeMarker(2.8, -1.8, -8.0, 0xD0A08D); // Terrain Crevasse
+markerGroup.add(marker1);
+markerGroup.add(marker2);
+markerGroup.add(marker3);
+scene.add(markerGroup);
+
+// Mouse parallax tracking
+let mouseX = 0, mouseY = 0;
+window.addEventListener('mousemove', (e) => {
+  mouseX = (e.clientX / window.innerWidth) - 0.5;
+  mouseY = (e.clientY / window.innerHeight) - 0.5;
+});
+
+window.addEventListener('resize', () => {
+  const w = container.clientWidth || window.innerWidth;
+  const h = container.clientHeight || window.innerHeight;
+  camera.aspect = w / h;
+  camera.updateProjectionMatrix();
+  renderer.setSize(w, h);
+});
+
+// Animation Loop
+const clock = new THREE.Clock();
+
+function animate() {
+  requestAnimationFrame(animate);
+  const t = clock.getElapsedTime();
+
+  // Spin rotor blades
+  rotors.forEach((rotor, i) => {
+    rotor.rotation.y += (i % 2 === 0 ? 0.38 : -0.38);
+  });
+
+  // Natural drone hover flight physics
+  drone.position.y = 7.5 + Math.sin(t * 1.6) * 0.45;
+  drone.rotation.z = Math.sin(t * 1.1) * 0.04 - (mouseX * 0.16);
+  drone.rotation.x = Math.cos(t * 1.3) * 0.03 + (mouseY * 0.14);
+  drone.rotation.y = Math.sin(t * 0.6) * 0.07;
+
+  // Expanding scanning radar rings
+  const s1 = 1.0 + (t * 0.45 % 1.7);
+  scanRing1.scale.set(s1, s1, s1);
+  ringMat1.opacity = Math.max(0, 0.7 - (s1 - 1.0) * 0.42);
+
+  const s2 = 1.0 + ((t * 0.45 + 0.85) % 1.7);
+  scanRing2.scale.set(s2, s2, s2);
+  ringMat2.opacity = Math.max(0, 0.5 - (s2 - 1.0) * 0.3);
+
+  // Gentle marker oscillation
+  marker1.position.y = -0.2 + Math.sin(t * 2.1) * 0.22;
+  marker2.position.y = 1.4 + Math.cos(t * 1.9) * 0.22;
+  marker3.position.y = -1.8 + Math.sin(t * 2.3 + 1.2) * 0.22;
+
+  // Smooth camera parallax
+  camera.position.x += (mouseX * 14 - camera.position.x) * 0.035;
+  camera.position.y += (16 + (-mouseY * 9) - camera.position.y) * 0.035;
+  camera.lookAt(0, 2.8, 0);
+
+  renderer.render(scene, camera);
+}
+
+animate();
+})();
+</script>
+</div>
+<!-- STITCH_THREEJS_END:ANIMATION_13 -->
+<!-- Floating Tactical HUD Tag 1: Top Left -->
+<div class="absolute top-4 left-4 bg-secondary/80 backdrop-blur-md px-3 py-1.5 rounded-lg text-secondary-container flex items-center gap-2 shadow-sm pointer-events-none">
+<span class="w-2 h-2 rounded-full bg-tertiary-fixed animate-ping"></span>
+<span class="font-label-telemetry-sm text-label-telemetry-sm tracking-widest uppercase">OPTICAL / FLIR ACTIVE</span>
+</div>
+<!-- Floating Tactical HUD Tag 2: Bottom Left -->
+<div class="absolute bottom-4 left-4 bg-secondary/80 backdrop-blur-md px-3 py-2 rounded-lg text-secondary-container shadow-sm pointer-events-none">
+<div class="font-label-telemetry-sm text-label-telemetry-sm text-tertiary-fixed tracking-wider uppercase">SURFACE PROFILE</div>
+<div class="font-headline-sm text-headline-sm text-secondary-fixed">TERRAIN: GLACIAL CREVASSE</div>
+</div>
+<!-- Floating Tactical HUD Tag 3: Top Right -->
+<div class="absolute top-4 right-4 bg-primary/80 backdrop-blur-md px-3 py-1.5 rounded-lg text-primary-fixed shadow-sm pointer-events-none flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm">radar</span>
+<span class="font-label-telemetry-sm text-label-telemetry-sm tracking-widest uppercase">SECTOR AERIAL SCAN</span>
+</div>
+<!-- Crosshair Decorative Overlay in Center-Right -->
+<div class="absolute bottom-6 right-6 p-2 rounded-lg bg-surface-container/70 backdrop-blur-sm pointer-events-none">
+<span class="font-label-telemetry-sm text-label-telemetry-sm text-secondary uppercase block">ELEVATION ANCHOR</span>
+<span class="font-headline-sm text-headline-sm text-primary">+2,840M AMSL</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 1: HOW IT WORKS -->
+<section class="w-full px-gutter md:px-margin-desktop py-space-xl bg-surface-container-low">
+<div class="max-w-7xl mx-auto flex flex-col space-y-space-xl">
+<!-- Section Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-sm">
+<div>
+<span class="font-label-telemetry-sm text-label-telemetry-sm uppercase tracking-widest text-tertiary-container block">Process Architecture</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-secondary uppercase tracking-tight">HOW IT WORKS</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+          A coherent operational sequence converting raw aerial feeds into synchronized ground intervention.
+        </p>
+</div>
+<!-- Horizontal 4-Step Process Pipeline -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-lg relative">
+<!-- Step 1 -->
+<div class="flex flex-col bg-surface-container p-space-lg rounded-xl shadow-sm relative group hover:bg-surface-container-high transition-colors">
+<div class="flex items-center justify-between pb-space-md">
+<span class="px-2.5 py-1 rounded-md bg-secondary text-secondary-container font-headline-sm text-headline-sm">01</span>
+<span class="material-symbols-outlined text-tertiary text-2xl">photo_camera</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-secondary mb-1">Drone Image</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Ingestion of aerial feeds and high-resolution optical and thermal imagery from any camera payload.
+          </p>
+<div class="mt-space-md pt-space-xs flex items-center gap-1.5 text-tertiary">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+<span class="font-label-telemetry-sm text-label-telemetry-sm uppercase">Raw Feed Intake</span>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="flex flex-col bg-surface-container p-space-lg rounded-xl shadow-sm relative group hover:bg-surface-container-high transition-colors">
+<div class="flex items-center justify-between pb-space-md">
+<span class="px-2.5 py-1 rounded-md bg-secondary text-secondary-container font-headline-sm text-headline-sm">02</span>
+<span class="material-symbols-outlined text-primary text-2xl">filter_center_focus</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-secondary mb-1">Object Detection</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Neural detection of people, vehicles, and visible terrain obstacles in complex mountain and rural zones.
+          </p>
+<div class="mt-space-md pt-space-xs flex items-center gap-1.5 text-primary">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span class="font-label-telemetry-sm text-label-telemetry-sm uppercase">Computer Vision Analysis</span>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="flex flex-col bg-surface-container p-space-lg rounded-xl shadow-sm relative group hover:bg-surface-container-high transition-colors">
+<div class="flex items-center justify-between pb-space-md">
+<span class="px-2.5 py-1 rounded-md bg-secondary text-secondary-container font-headline-sm text-headline-sm">03</span>
+<span class="material-symbols-outlined text-tertiary text-2xl">fact_check</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-secondary mb-1">Priority Assessment</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Rule-based survival scoring and plain-language explainability based on cold exposure and vitals risk.
+          </p>
+<div class="mt-space-md pt-space-xs flex items-center gap-1.5 text-tertiary">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+<span class="font-label-telemetry-sm text-label-telemetry-sm uppercase">Human-Centric Scoring</span>
+</div>
+</div>
+<!-- Step 4 -->
+<div class="flex flex-col bg-surface-container p-space-lg rounded-xl shadow-sm relative group hover:bg-surface-container-high transition-colors">
+<div class="flex items-center justify-between pb-space-md">
+<span class="px-2.5 py-1 rounded-md bg-primary text-on-primary font-headline-sm text-headline-sm">04</span>
+<span class="material-symbols-outlined text-secondary text-2xl">group_work</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-secondary mb-1">Team Assignment</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Instant dispatch vectoring and tactical evidence synchronization with mobile ground operatives.
+          </p>
+<div class="mt-space-md pt-space-xs flex items-center gap-1.5 text-secondary">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-label-telemetry-sm text-label-telemetry-sm uppercase">Field Coordination</span>
+</div>
+</div>
+</div>
+<!-- Connecting Progress Axis Visualization -->
+<div class="hidden lg:flex items-center justify-between px-space-xl py-space-sm bg-surface-container rounded-lg">
+<div class="flex items-center gap-space-sm text-secondary font-label-telemetry-sm text-label-telemetry-sm uppercase">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span>1. Ingestion Phase</span>
+</div>
+<div class="h-0.5 flex-1 mx-space-md bg-secondary-container relative">
+<div class="absolute inset-y-0 left-0 bg-tertiary w-3/4"></div>
+</div>
+<div class="flex items-center gap-space-sm text-secondary font-label-telemetry-sm text-label-telemetry-sm uppercase">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span>4. Live Dispatch Ready</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 2: CORE CAPABILITIES -->
+<section class="w-full px-gutter md:px-margin-desktop py-space-xl bg-surface" id="capabilities">
+<div class="max-w-7xl mx-auto flex flex-col space-y-space-xl">
+<!-- Section Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-sm">
+<div>
+<span class="font-label-telemetry-sm text-label-telemetry-sm uppercase tracking-widest text-primary block">Operational Systems</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-secondary uppercase tracking-tight">CORE CAPABILITIES</h2>
+</div>
+<span class="font-label-telemetry-sm text-label-telemetry-sm uppercase text-secondary bg-surface-container px-3 py-1.5 rounded">
+          Civil Defense Spec SAR-OS
+        </span>
+</div>
+<!-- 3x2 Grid for the 6 Capabilities -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-lg">
+<!-- Capability 1 -->
+<div class="flex flex-col justify-between p-space-lg bg-surface-container-high rounded-xl shadow-sm hover:shadow-md transition-shadow">
+<div>
+<div class="w-12 h-12 rounded-lg bg-secondary-container flex items-center justify-center text-primary mb-space-md">
+<span class="material-symbols-outlined text-2xl">vital_signs</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-secondary mb-space-xs">Smart Survivor Priority Score</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Algorithmic evaluation factoring exposure window, mobility indicators, and environmental cold stress.
+            </p>
+</div>
+<div class="pt-space-md mt-space-md flex items-center justify-between text-secondary">
+<span class="font-label-telemetry-sm text-label-telemetry-sm uppercase tracking-wider">Dynamic Risk Metric</span>
+<span class="material-symbols-outlined text-base">analytics</span>
+</div>
+</div>
+<!-- Capability 2 -->
+<div class="flex flex-col justify-between p-space-lg bg-surface-container-high rounded-xl shadow-sm hover:shadow-md transition-shadow">
+<div>
+<div class="w-12 h-12 rounded-lg bg-secondary-container flex items-center justify-center text-tertiary mb-space-md">
+<span class="material-symbols-outlined text-2xl">visibility</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-secondary mb-space-xs">Explainable AI Decisions</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              No black boxes; clear rationale behind every prioritized survivor and classified obstacle.
+            </p>
+</div>
+<div class="pt-space-md mt-space-md flex items-center justify-between text-secondary">
+<span class="font-label-telemetry-sm text-label-telemetry-sm uppercase tracking-wider">Transparent Logic</span>
+<span class="material-symbols-outlined text-base">rule</span>
+</div>
+</div>
+<!-- Capability 3 -->
+<div class="flex flex-col justify-between p-space-lg bg-surface-container-high rounded-xl shadow-sm hover:shadow-md transition-shadow">
+<div>
+<div class="w-12 h-12 rounded-lg bg-secondary-container flex items-center justify-center text-primary mb-space-md">
+<span class="material-symbols-outlined text-2xl">crisis_alert</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-secondary mb-space-xs">Rescue Team Assignment</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Direct operational handoff from aerial coordinate detection to boots-on-the-ground response units.
+            </p>
+</div>
+<div class="pt-space-md mt-space-md flex items-center justify-between text-secondary">
+<span class="font-label-telemetry-sm text-label-telemetry-sm uppercase tracking-wider">Ground Sync</span>
+<span class="material-symbols-outlined text-base">alt_route</span>
+</div>
+</div>
+<!-- Capability 4 -->
+<div class="flex flex-col justify-between p-space-lg bg-surface-container-high rounded-xl shadow-sm hover:shadow-md transition-shadow">
+<div>
+<div class="w-12 h-12 rounded-lg bg-secondary-container flex items-center justify-center text-secondary mb-space-md">
+<span class="material-symbols-outlined text-2xl">history</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-secondary mb-space-xs">Incident Timeline</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Real-time chronological audit trail capturing every detection, verification, and dispatch milestone.
+            </p>
+</div>
+<div class="pt-space-md mt-space-md flex items-center justify-between text-secondary">
+<span class="font-label-telemetry-sm text-label-telemetry-sm uppercase tracking-wider">Audit Integrity</span>
+<span class="material-symbols-outlined text-base">timer</span>
+</div>
+</div>
+<!-- Capability 5 -->
+<div class="flex flex-col justify-between p-space-lg bg-surface-container-high rounded-xl shadow-sm hover:shadow-md transition-shadow">
+<div>
+<div class="w-12 h-12 rounded-lg bg-secondary-container flex items-center justify-center text-tertiary mb-space-md">
+<span class="material-symbols-outlined text-2xl">description</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-secondary mb-space-xs">One-Click Evidence Report</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Automated generation of standardized incident dossiers for mission debriefing and civil defense logs.
+            </p>
+</div>
+<div class="pt-space-md mt-space-md flex items-center justify-between text-secondary">
+<span class="font-label-telemetry-sm text-label-telemetry-sm uppercase tracking-wider">Instant Dossier</span>
+<span class="material-symbols-outlined text-base">verified</span>
+</div>
+</div>
+<!-- Capability 6 -->
+<div class="flex flex-col justify-between p-space-lg bg-surface-container-high rounded-xl shadow-sm hover:shadow-md transition-shadow">
+<div>
+<div class="w-12 h-12 rounded-lg bg-secondary-container flex items-center justify-center text-primary mb-space-md">
+<span class="material-symbols-outlined text-2xl">terrain</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-secondary mb-space-xs">Terrain-Adaptive Rescue Intelligence</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Context-aware algorithms calibrated for alpine crevasses, dense forest canopy, and coastal zones.
+            </p>
+</div>
+<div class="pt-space-md mt-space-md flex items-center justify-between text-secondary">
+<span class="font-label-telemetry-sm text-label-telemetry-sm uppercase tracking-wider">Bi-Thermal Mesh</span>
+<span class="material-symbols-outlined text-base">layers</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 3: FINAL CALL TO ACTION -->
+<section class="w-full px-gutter md:px-margin-desktop py-space-xl bg-surface-container">
+<div class="max-w-5xl mx-auto bg-surface-container-high p-space-xl rounded-2xl shadow-md text-center flex flex-col items-center space-y-space-md relative overflow-hidden">
+<!-- Minimalist Graphic Background Reticle -->
+<div class="absolute -right-16 -top-16 w-64 h-64 rounded-full bg-secondary-container opacity-40 pointer-events-none"></div>
+<div class="absolute -left-16 -bottom-16 w-64 h-64 rounded-full bg-tertiary-fixed-dim opacity-30 pointer-events-none"></div>
+<!-- Operational Tag -->
+<div class="inline-flex items-center gap-space-xs px-3 py-1 rounded-full bg-surface-container text-tertiary font-label-telemetry-sm text-label-telemetry-sm uppercase">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span>Mission Ready Deployment</span>
+</div>
+<!-- Main Action Heading -->
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-secondary uppercase max-w-2xl leading-tight">
+        From Aerial Detection to Coordinated Action.
+      </h2>
+<!-- Mission Statement Sentence -->
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+        Deploy advanced AI visual triage to reduce response latency and deliver life-saving clarity to emergency rescue commands worldwide.
+      </p>
+<!-- Action Button -->
+<div class="pt-space-sm">
+<a class="inline-flex items-center justify-center px-space-xl py-3.5 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-headline-sm text-headline-sm transition-all shadow-md group" href="#">
+<span>Enter Rescue Platform</span>
+<span class="material-symbols-outlined ml-2 transition-transform group-hover:translate-x-1">arrow_forward</span>
+</a>
+</div>
+<!-- Technical Protocol Reference -->
+<div class="pt-space-md flex items-center gap-space-md text-on-surface-variant font-label-telemetry-sm text-label-telemetry-sm uppercase">
+<span>SAR PROTOCOL COMPLIANT</span>
+<span>•</span>
+<span>ZERO CLOUD LATENCY DEPENDENCY</span>
+<span>•</span>
+<span>END-TO-END AUDITABILITY</span>
+</div>
+</div>
+</section>
+</div></main><footer class="w-full bg-surface-container py-space-lg shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="w-full px-gutter-desktop mx-auto flex flex-col md:flex-row items-center justify-between gap-space-md"><div class="flex flex-col gap-space-xs"><div class="flex items-center gap-space-sm"><span class="font-label-telemetry-sm text-label-telemetry-sm uppercase font-bold text-primary">Grid Anchor</span><span class="font-label-telemetry-sm text-label-telemetry-sm text-on-surface-variant">LAT 46.5197° N // LON 8.5412° E // ALT 2,140M</span></div><span class="font-body-sm text-body-sm text-on-surface-variant">SkySnR Vision Autonomous Aerial Rescue System. Defense &amp; Civil Protection Spec SAR-OS v4.12.</span></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs px-2.5 py-1 bg-surface-container-high rounded"><span class="font-label-telemetry-sm text-label-telemetry-sm uppercase text-on-surface-variant">VERIFICATION</span><span class="font-label-telemetry-sm text-label-telemetry-sm text-tertiary-container">SHA256:7e91...bf80</span></div><div class="flex items-center gap-space-xs px-2.5 py-1 bg-secondary-container rounded"><span class="w-2 h-2 rounded-full bg-secondary"></span><span class="font-label-telemetry-sm text-label-telemetry-sm uppercase text-on-secondary-container">MESH: OPTIMAL</span></div></div></div></footer></body></html>

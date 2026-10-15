@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "inverse-primary": "#fcb799", "on-secondary-fixed": "#111e1a", "surface-container-highest": "#dae6d9", "tertiary-fixed": "#ffdea9", "on-secondary": "#ffffff", "tertiary": "#715829", "on-surface-variant": "#52443e", "secondary-container": "#d7e6e0", "surface-dim": "#d1ddd1", "error-container": "#ffdad6", "inverse-surface": "#28332a", "tertiary-container": "#8c703f", "on-tertiary-container": "#fffbff", "inverse-on-surface": "#e8f4e7", "on-tertiary-fixed": "#271900", "background": "#f0fdef", "surface-variant": "#dae6d9", "primary-container": "#a0674e", "surface-tint": "#86513a", "on-primary-fixed": "#351001", "surface-container-high": "#dfebdf", "on-tertiary-fixed-variant": "#5a4316", "surface-bright": "#f0fdef", "on-primary-container": "#fffbff", "outline-variant": "#d7c2bb", "surface-container-low": "#ebf7ea", "on-background": "#141e16", "on-secondary-container": "#596762", "on-error-container": "#93000a", "primary": "#834f37", "on-primary-fixed-variant": "#6a3a24", "on-tertiary": "#ffffff", "primary-fixed-dim": "#fcb799", "outline": "#84746d", "error": "#ba1a1a", "secondary": "#54615d", "on-secondary-fixed-variant": "#3c4a45", "on-primary": "#ffffff", "on-error": "#ffffff", "primary-fixed": "#ffdbcd", "tertiary-fixed-dim": "#e4c289", "secondary-fixed": "#d7e6e0", "on-surface": "#141e16", "surface": "#f0fdef", "secondary-fixed-dim": "#bbcac4", "surface-container-lowest": "#ffffff", "surface-container": "#e5f1e4" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "gutter": "1rem", "space-xl": "2.5rem", "margin-desktop": "2rem", "space-xs": "0.25rem", "space-lg": "1.5rem", "margin": "1rem", "space-md": "1rem", "space-sm": "0.5rem", "gutter-desktop": "1.5rem" }, "fontFamily": { "headline-sm": ["Space Grotesk"], "body-lg": ["Manrope"], "headline-lg": ["Space Grotesk"], "body-md": ["Manrope"], "headline-md": ["Space Grotesk"], "display-hero-mobile": ["Space Grotesk"], "label-telemetry-sm": ["Space Grotesk"], "label-telemetry-lg": ["Space Grotesk"], "display-hero": ["Space Grotesk"], "body-sm": ["Manrope"], "data-metric": ["Space Grotesk"], "headline-lg-mobile": ["Space Grotesk"] }, "fontSize": { "headline-sm": ["18px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "500" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "400" }], "headline-md": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "display-hero-mobile": ["32px", { "lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-telemetry-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.08em", "fontWeight": "700" }], "label-telemetry-lg": ["14px", { "lineHeight": "18px", "letterSpacing": "0.06em", "fontWeight": "600" }], "display-hero": ["48px", { "lineHeight": "52px", "letterSpacing": "-0.03em", "fontWeight": "700" }], "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "400" }], "data-metric": ["28px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-lg-mobile": ["24px", { "lineHeight": "30px", "letterSpacing": "-0.01em", "fontWeight": "600" }] } } } }</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low border-r border-outline-variant/30 z-50 flex flex-col justify-between p-space-md"><div class="flex flex-col gap-space-lg"><div class="flex items-center gap-space-sm px-space-xs py-space-xs"><div class="w-9 h-9 rounded bg-secondary flex items-center justify-center text-on-secondary"><span class="material-symbols-outlined text-[20px]">filter_center_focus</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface">SkySnR</span><span class="font-label-telemetry-sm text-label-telemetry-sm uppercase tracking-wider text-secondary">Vision Operations</span></div></div><nav class="flex flex-col gap-space-xs" data-active-classes="bg-secondary-container text-on-secondary-fixed-variant font-semibold"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="font-body-md text-body-md">Dashboard</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="mission-analysis" href="#"><span class="material-symbols-outlined text-[20px]">radar</span><span class="font-body-md text-body-md">Mission Analysis</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="incidents" href="#"><span class="material-symbols-outlined text-[20px]">assignment_late</span><span class="font-body-md text-body-md">Incidents</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-space-sm rounded transition-colors bg-secondary-container text-on-secondary-fixed-variant font-semibold" data-path="reports" href="#"><span class="material-symbols-outlined text-[20px]">description</span><span class="font-body-md text-body-md">Reports</span></a></nav></div><div class="border-t border-outline-variant/30 pt-space-md flex flex-col gap-space-sm"><div class="flex items-center gap-space-sm px-space-xs"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="flex flex-col overflow-hidden"><span class="font-body-md text-body-md font-medium text-on-surface truncate">Cdr. E. Mercer</span><span class="font-body-sm text-body-sm text-secondary truncate">Rescue Operations Mgr</span></div></div><button class="flex items-center justify-center gap-space-xs w-full py-space-xs px-space-sm rounded bg-surface-container-high text-on-surface hover:bg-surface-variant transition-colors"><span class="material-symbols-outlined text-[16px]">logout</span><span class="font-label-telemetry-sm text-label-telemetry-sm uppercase tracking-wider">Sign Out</span></button></div></aside><div class="pl-72 flex flex-col min-h-screen"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/85 backdrop-blur-md border-b border-outline-variant/30 z-40 px-space-lg flex items-center justify-between"><div class="flex items-center gap-space-md"><span class="font-label-telemetry-sm text-label-telemetry-sm uppercase tracking-wider text-secondary">Mission Desk</span><span class="text-outline-variant">/</span><div class="relative flex items-center"><select class="appearance-none bg-surface-container-low border border-outline-variant/40 rounded px-space-md py-space-xs pr-space-xl font-body-sm text-body-sm text-on-surface focus:outline-none focus:border-primary"><option>Sector-09 Alpine Sweep (Active)</option><option>Cascade Glacier Grid-4</option><option>Northern Ridge Extraction</option></select><span class="material-symbols-outlined absolute right-space-xs text-[18px] text-secondary pointer-events-none">arrow_drop_down</span></div></div><div class="flex items-center gap-space-md"><button class="relative p-space-xs rounded hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-primary"></span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="relative pt-16 bg-surface-container-low/40 min-h-screen px-space-lg py-space-md w-full"><div class="flex flex-col w-full gap-space-lg pb-space-xl">
+<!-- Top Level Command Banner / Document Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md pb-space-md border-b border-secondary/20">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-sm text-secondary">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+<span class="font-label-telemetry-sm text-label-telemetry-sm uppercase tracking-widest">Autonomous Telemetry &amp; Verification Protocol</span>
+<span class="text-tertiary text-body-sm font-semibold">• STANAG 4586 Rev.3 Compliance</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Evidence Reports</h1>
+<p class="font-body-md text-body-md text-secondary max-w-2xl">
+        Generate and review documented mission and incident evidence. Forensic dossiers are cryptographically stamped for alpine emergency coordination, civil defense audit trails, and SAR deployment handover.
+      </p>
+</div>
+<div class="flex items-center gap-space-sm self-start md:self-auto shrink-0">
+<button class="flex items-center gap-space-xs px-space-md py-space-sm rounded bg-primary text-surface font-headline-sm text-body-md shadow-sm hover:opacity-95 transition-all">
+<span class="material-symbols-outlined text-[18px]">post_add</span>
+<span>Generate Evidence Report</span>
+</button>
+</div>
+</div>
+<!-- Two-Column Architecture: 35% Archive / 65% Tactical Dossier -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT: Archive & Ingestion Log (Col 1-4 / ~35%) -->
+<div class="lg:col-span-4 flex flex-col gap-space-md">
+<!-- Archive Filter & Status Strip -->
+<div class="bg-surface-container rounded p-space-md flex flex-col gap-space-sm shadow-sm">
+<div class="flex items-center justify-between pb-space-xs border-b border-secondary/15">
+<div class="flex items-center gap-space-xs text-secondary">
+<span class="material-symbols-outlined text-[16px]">inventory_2</span>
+<span class="font-label-telemetry-sm text-label-telemetry-sm uppercase tracking-wider">Indexed Dossiers</span>
+</div>
+<span class="font-label-telemetry-sm text-label-telemetry-sm text-tertiary bg-secondary-container/60 px-space-xs py-0.5 rounded">3 Active in Buffer</span>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container-high px-space-sm py-1.5 rounded">
+<span class="material-symbols-outlined text-[16px] text-secondary">search</span>
+<input class="bg-transparent font-body-sm text-body-sm text-on-surface placeholder:text-secondary focus:outline-none w-full" placeholder="Filter by sortie, incident, coordinate..." type="text" value=""/>
+<span class="font-label-telemetry-sm text-label-telemetry-sm text-secondary">/</span>
+</div>
+</div>
+<!-- Reports Feed -->
+<div class="flex flex-col gap-space-sm">
+<!-- Item 1 (Selected) -->
+<div class="relative bg-surface-container-high rounded p-space-md flex flex-col gap-space-sm transition-all shadow-sm">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-primary rounded-l"></div>
+<div class="flex items-center justify-between pl-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface">#REP-2024-088</span>
+<span class="font-label-telemetry-sm text-label-telemetry-sm uppercase px-space-xs py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed">Ready</span>
+</div>
+<div class="pl-space-xs flex flex-col gap-0.5">
+<div class="font-headline-sm text-body-lg text-primary tracking-tight font-semibold">Mont Collon Crevasse #792</div>
+<div class="font-body-sm text-body-sm text-secondary">Sortie VAL-04 Alpine Sweep</div>
+</div>
+<div class="pl-space-xs grid grid-cols-2 gap-space-xs pt-space-xs border-t border-secondary/15 font-body-sm text-body-sm">
+<div>
+<span class="block text-secondary font-label-telemetry-sm text-label-telemetry-sm uppercase">Timestamp</span>
+<span class="text-on-surface font-headline-sm text-body-sm">Today 14:30 UTC</span>
+</div>
+<div>
+<span class="block text-secondary font-label-telemetry-sm text-label-telemetry-sm uppercase">Prepared By</span>
+<span class="text-on-surface font-headline-sm text-body-sm truncate block">Rescue Ops Mgr</span>
+</div>
+</div>
+<div class="pl-space-xs pt-space-xs flex items-center justify-between">
+<span class="font-label-telemetry-sm text-label-telemetry-sm text-tertiary flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span> Inspection Active
+            </span>
+<div class="flex items-center gap-space-xs">
+<button class="px-space-sm py-1 rounded bg-secondary text-surface font-label-telemetry-sm text-label-telemetry-sm uppercase hover:opacity-90 transition-colors">
+                Preview
+              </button>
+<button class="p-1 rounded bg-surface-container hover:bg-surface-container-highest text-secondary transition-colors" title="Quick PDF Download">
+<span class="material-symbols-outlined text-[16px]">download</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="relative bg-surface-container rounded p-space-md flex flex-col gap-space-sm transition-all hover:bg-surface-container-high shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-secondary">#REP-2024-085</span>
+<span class="font-label-telemetry-sm text-label-telemetry-sm uppercase px-space-xs py-0.5 rounded bg-secondary-container text-secondary">Archived</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<div class="font-headline-sm text-body-lg text-on-surface font-semibold">Valais Glacial Ridge #788</div>
+<div class="font-body-sm text-body-sm text-secondary">Sortie VAL-02 Thermal Vector</div>
+</div>
+<div class="grid grid-cols-2 gap-space-xs pt-space-xs border-t border-secondary/15 font-body-sm text-body-sm">
+<div>
+<span class="block text-secondary font-label-telemetry-sm text-label-telemetry-sm uppercase">Timestamp</span>
+<span class="text-on-surface font-headline-sm text-body-sm">Yesterday 16:45 UTC</span>
+</div>
+<div>
+<span class="block text-secondary font-label-telemetry-sm text-label-telemetry-sm uppercase">Prepared By</span>
+<span class="text-on-surface font-headline-sm text-body-sm truncate block">Rescue Ops Mgr</span>
+</div>
+</div>
+<div class="pt-space-xs flex items-center justify-between">
+<span class="font-label-telemetry-sm text-label-telemetry-sm text-secondary">Cryptographic Hash Verified</span>
+<div class="flex items-center gap-space-xs">
+<button class="px-space-sm py-1 rounded bg-surface-container-high hover:bg-surface-container-highest text-secondary font-label-telemetry-sm text-label-telemetry-sm uppercase transition-colors">
+                Inspect
+              </button>
+<button class="p-1 rounded bg-surface-container-high hover:bg-surface-container-highest text-secondary transition-colors" title="Download PDF">
+<span class="material-symbols-outlined text-[16px]">download</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="relative bg-surface-container rounded p-space-md flex flex-col gap-space-sm transition-all hover:bg-surface-container-high shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-secondary">#REP-2024-079</span>
+<span class="font-label-telemetry-sm text-label-telemetry-sm uppercase px-space-xs py-0.5 rounded bg-secondary-container text-secondary">Archived</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<div class="font-headline-sm text-body-lg text-on-surface font-semibold">Rhine Basin Sector B #785</div>
+<div class="font-body-sm text-body-sm text-secondary">Sortie RH-09 Flood Vector</div>
+</div>
+<div class="grid grid-cols-2 gap-space-xs pt-space-xs border-t border-secondary/15 font-body-sm text-body-sm">
+<div>
+<span class="block text-secondary font-label-telemetry-sm text-label-telemetry-sm uppercase">Timestamp</span>
+<span class="text-on-surface font-headline-sm text-body-sm">3 Days ago</span>
+</div>
+<div>
+<span class="block text-secondary font-label-telemetry-sm text-label-telemetry-sm uppercase">Prepared By</span>
+<span class="text-on-surface font-headline-sm text-body-sm truncate block">Rescue Ops Mgr</span>
+</div>
+</div>
+<div class="pt-space-xs flex items-center justify-between">
+<span class="font-label-telemetry-sm text-label-telemetry-sm text-secondary">Dispatched Ground Units #03</span>
+<div class="flex items-center gap-space-xs">
+<button class="px-space-sm py-1 rounded bg-surface-container-high hover:bg-surface-container-highest text-secondary font-label-telemetry-sm text-label-telemetry-sm uppercase transition-colors">
+                Inspect
+              </button>
+<button class="p-1 rounded bg-surface-container-high hover:bg-surface-container-highest text-secondary transition-colors" title="Download PDF">
+<span class="material-symbols-outlined text-[16px]">download</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Audit Metadata Footer Box -->
+<div class="p-space-md rounded bg-surface-container flex flex-col gap-space-xs text-secondary">
+<div class="flex items-center gap-space-xs font-label-telemetry-sm text-label-telemetry-sm uppercase">
+<span class="material-symbols-outlined text-[16px] text-tertiary">lock</span>
+<span>Storage Integrity Check</span>
+</div>
+<p class="font-body-sm text-body-sm">
+          Evidence bundles are automatically replicated to distributed field radios and locked via immutable SHA-256 blocks for Swiss Federal SAR compliance.
+        </p>
+</div>
+</div>
+<!-- RIGHT: High-Fidelity Formal Document Preview (Col 5-12 / ~65%) -->
+<div class="lg:col-span-8 flex flex-col gap-space-md">
+<!-- Document Dossier Sheet (Refined Applegate Sage tinted surface with tactile framing) -->
+<div class="bg-surface-container-high rounded p-space-lg flex flex-col gap-space-lg shadow-md border-t-4 border-primary">
+<!-- Dossier Header Section -->
+<div class="flex flex-col gap-space-sm pb-space-md border-b border-secondary/20">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 bg-primary rounded-none"></span>
+<span class="font-headline-sm text-headline-sm tracking-tight text-on-surface uppercase">SKYSNR VISION // CIVIL DEFENSE &amp; MOUNTAIN RESCUE DOSSIER</span>
+</div>
+<span class="font-label-telemetry-sm text-label-telemetry-sm uppercase tracking-widest text-primary px-space-sm py-0.5 bg-primary-fixed rounded self-start md:self-auto font-bold">
+              OFFICIAL EMERGENCY INCIDENT RECORD
+            </span>
+</div>
+<div class="flex flex-wrap items-center justify-between gap-y-1 text-secondary font-body-sm text-body-sm pt-space-xs">
+<div class="flex items-center gap-space-md">
+<span><strong class="text-on-surface font-semibold">Report Reference:</strong> #REP-2024-088</span>
+<span>•</span>
+<span><strong class="text-on-surface font-semibold">Date &amp; Time:</strong> 2024-10-18 14:30Z</span>
+</div>
+<div class="font-label-telemetry-sm text-label-telemetry-sm uppercase tracking-wider text-secondary">
+              SECURITY LEVEL: MIL-STD CLASSIFIED B-1
+            </div>
+</div>
+</div>
+<!-- Mission Information Block -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md bg-surface-container rounded p-space-md">
+<div class="flex flex-col gap-0.5">
+<span class="font-label-telemetry-sm text-label-telemetry-sm uppercase tracking-wider text-secondary">Mission Identifier</span>
+<span class="font-headline-sm text-body-lg text-on-surface font-bold">Mont Collon Crevasse</span>
+<span class="font-body-sm text-body-sm text-primary font-medium">Sortie Code: VAL-04</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="font-label-telemetry-sm text-label-telemetry-sm uppercase tracking-wider text-secondary">Disaster &amp; Terrain Profile</span>
+<span class="font-headline-sm text-body-lg text-on-surface font-bold">Alpine Stranding</span>
+<span class="font-body-sm text-body-sm text-secondary">Glacial Mountain Terrain / Crevasse Zone</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="font-label-telemetry-sm text-label-telemetry-sm uppercase tracking-wider text-secondary">Target Locus &amp; Altitude</span>
+<span class="font-headline-sm text-body-lg text-on-surface font-bold">46°12'24.8"N 07°45'11.2"E</span>
+<span class="font-body-sm text-body-sm text-secondary">Elevation: 3,420m AMSL (Baro-Corrected)</span>
+</div>
+</div>
+<!-- Detection Summary & Visual Evidence Frame -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs text-on-surface font-headline-sm text-headline-sm">
+<span class="material-symbols-outlined text-[20px] text-primary">center_focus_strong</span>
+<span>Primary Drone Visual Evidence &amp; Computer Vision Bounds</span>
+</div>
+<span class="font-label-telemetry-sm text-label-telemetry-sm text-secondary uppercase">Payload: Dual EO/IR Optronics</span>
+</div>
+<!-- Synthetic Drone Feed Frame with Bounding Box overlays -->
+<div class="relative w-full h-80 rounded overflow-hidden bg-secondary flex flex-col justify-between p-space-md shadow-inner">
+<img class="absolute inset-0 w-full h-full object-cover opacity-85 mix-blend-luminosity" data-alt="High-altitude drone surveillance thermal optical photograph looking down onto rugged alpine snow glacier terrain with crevasses and a stranded mountaineer wearing bright orange gear surrounded by high-contrast technical targeting brackets and coordinates in earthy terracotta and sage hues" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAa1IHuuoNjBQIUt-jULFogh53KPvqERVzYllVmda1MH-mmaYVlg8D-1TEuKaKPGdWGz0Vd2yGIH0Me_UmWvIHzjbaBrK4OABTTp46TYwws4D6AXUsFhEvWeyPak2y1IKdjU5K4UOd0EqzByonUTkKIZCGYaT5DWnExJYm_UqHWctxLuIGiCAXZOzAwjyd42Wf69OPjzSSUSV4U5xFj09DRUcslrhRF5zr5Ynz4jijv2wzKKdShyjvh"/>
+<!-- Drone Telemetry HUD Layer -->
+<div class="relative z-10 flex items-center justify-between text-surface font-label-telemetry-sm text-label-telemetry-sm uppercase drop-shadow">
+<div class="flex items-center gap-space-sm bg-secondary/80 px-space-sm py-1 rounded backdrop-blur-sm">
+<span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+<span>UAV-VAL-04 EO OPTIC // FLIR 640 CORE</span>
+</div>
+<div class="bg-secondary/80 px-space-sm py-1 rounded backdrop-blur-sm text-tertiary-fixed">
+                ALT: 142m AGL | AZIMUTH: 312° | GSD: 2.1cm/px
+              </div>
+</div>
+<!-- Bounding Box #DET-01 (Survivor) -->
+<div class="absolute left-1/3 top-1/4 w-36 h-40 border-2 border-primary rounded-none pointer-events-none flex flex-col justify-between p-1 z-10">
+<div class="flex items-center justify-between bg-primary text-surface px-1 py-0.5 font-label-telemetry-sm text-label-telemetry-sm">
+<span>#DET-01 SURVIVOR</span>
+<span class="font-bold">94.2% CONF</span>
+</div>
+<div class="font-label-telemetry-sm text-label-telemetry-sm text-surface bg-secondary/90 px-1 py-0.5">
+                BIO-SIGN: POSITIVE // MOVING
+              </div>
+</div>
+<!-- Bounding Box Obstacle (Crevasse Lip) -->
+<div class="absolute left-1/2 top-1/2 w-48 h-24 border-2 border-tertiary border-dashed rounded-none pointer-events-none flex flex-col justify-between p-1 z-10">
+<div class="flex items-center justify-between bg-tertiary text-surface px-1 py-0.5 font-label-telemetry-sm text-label-telemetry-sm">
+<span>TERRAIN HAZARD: CREVASSE LIP</span>
+<span class="font-bold">88.6% CONF</span>
+</div>
+<div class="font-label-telemetry-sm text-label-telemetry-sm text-surface bg-secondary/90 px-1 py-0.5">
+                DIST: 11.8M // SLOPE: 38°
+              </div>
+</div>
+<!-- Bottom Reticle readout -->
+<div class="relative z-10 flex items-center justify-between text-surface font-label-telemetry-sm text-label-telemetry-sm bg-secondary/85 p-space-xs rounded backdrop-blur-sm">
+<span class="text-tertiary-fixed">DETECTION SPECS: 1 Person (94.2% conf) // 1 Crevasse Lip Obstacle (88.6% conf)</span>
+<span>UTC SNAPSHOT: 14:07:31Z</span>
+</div>
+</div>
+</div>
+<!-- Smart Survivor Priority Score Audit Section -->
+<div class="bg-surface-container rounded p-space-md flex flex-col gap-space-md">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm pb-space-xs border-b border-secondary/15">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">psychology</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Smart Survivor Priority Score Audit</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="font-label-telemetry-sm text-label-telemetry-sm uppercase text-secondary">Triage Assessment</span>
+<span class="px-space-sm py-0.5 rounded bg-primary text-surface font-headline-sm text-body-md font-bold tracking-wider">
+                85 / 100 (HIGH PRIORITY)
+              </span>
+</div>
+</div>
+<!-- Factor Breakdown Grid -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-space-sm">
+<div class="bg-surface-container-high p-space-sm rounded flex flex-col gap-0.5">
+<span class="font-label-telemetry-sm text-label-telemetry-sm uppercase text-secondary">Base Detection</span>
+<span class="font-headline-sm text-headline-sm text-primary font-bold">+20 PTS</span>
+<span class="font-body-sm text-body-sm text-secondary">Class confidence &gt; 90%</span>
+</div>
+<div class="bg-surface-container-high p-space-sm rounded flex flex-col gap-0.5">
+<span class="font-label-telemetry-sm text-label-telemetry-sm uppercase text-secondary">Proximity to Obstacle</span>
+<span class="font-headline-sm text-headline-sm text-primary font-bold">+15 PTS</span>
+<span class="font-body-sm text-body-sm text-secondary">&lt; 15m from crevasse void</span>
+</div>
+<div class="bg-surface-container-high p-space-sm rounded flex flex-col gap-0.5">
+<span class="font-label-telemetry-sm text-label-telemetry-sm uppercase text-secondary">Urgent Flag</span>
+<span class="font-headline-sm text-headline-sm text-primary font-bold">+25 PTS</span>
+<span class="font-body-sm text-body-sm text-secondary">Alpine hypothermia risk</span>
+</div>
+<div class="bg-surface-container-high p-space-sm rounded flex flex-col gap-0.5">
+<span class="font-label-telemetry-sm text-label-telemetry-sm uppercase text-secondary">Thermal Differential</span>
+<span class="font-headline-sm text-headline-sm text-primary font-bold">+25 PTS</span>
+<span class="font-body-sm text-body-sm text-secondary">ΔT +18.4°C vs snowpack</span>
+</div>
+</div>
+<!-- Explainability Rationale Quote Box -->
+<div class="p-space-sm bg-surface-container-highest rounded border-l-4 border-tertiary flex flex-col gap-0.5">
+<span class="font-label-telemetry-sm text-label-telemetry-sm uppercase text-tertiary font-bold tracking-wider">Algorithmic Explainability Rationale</span>
+<p class="font-body-md text-body-md text-on-surface italic">
+              "Conscious subject located within 12m of active 38° crevasse lip in extreme sub-zero environment. Elevated priority triggered by rapid afternoon thermal degradation and unstable cornice overhang directly above anchor point."
+            </p>
+</div>
+</div>
+<!-- Operations & Assignment Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="bg-surface-container rounded p-space-md flex flex-col gap-space-xs">
+<span class="font-label-telemetry-sm text-label-telemetry-sm uppercase text-secondary">Human-in-the-Loop Verification</span>
+<div class="flex items-center gap-space-sm pt-space-xs">
+<div class="w-10 h-10 rounded bg-secondary flex items-center justify-center text-surface">
+<span class="material-symbols-outlined text-[20px]">how_to_reg</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-body-lg text-on-surface font-bold">Cdr. E. Mercer</span>
+<span class="font-body-sm text-body-sm text-primary">Rescue Operations Manager (Verified 14:15 UTC)</span>
+</div>
+</div>
+<div class="text-secondary font-body-sm text-body-sm pt-1">
+              Authorized extraction mandate #CH-VAL-792 under Cantonal Emergency Protocol.
+            </div>
+</div>
+<div class="bg-surface-container rounded p-space-md flex flex-col gap-space-xs">
+<span class="font-label-telemetry-sm text-label-telemetry-sm uppercase text-secondary">Assigned Rescue Team Member</span>
+<div class="flex items-center gap-space-sm pt-space-xs">
+<div class="w-10 h-10 rounded bg-tertiary flex items-center justify-center text-surface">
+<span class="material-symbols-outlined text-[20px]">hiking</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-body-lg text-on-surface font-bold">Lukas Bieri</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Alpine Ground Team Alpha // Lead Climber</span>
+</div>
+</div>
+<div class="text-secondary font-body-sm text-body-sm pt-1">
+              Callsign: Alpine-Alpha-1 • Heli-drop ETA 18 min at landing shelf LZ-2.
+            </div>
+</div>
+</div>
+<!-- Incident Timeline Summary -->
+<div class="flex flex-col gap-space-xs bg-surface-container rounded p-space-md">
+<span class="font-label-telemetry-sm text-label-telemetry-sm uppercase text-secondary">Incident Milestones Timeline</span>
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead>
+<tr class="border-b border-secondary/20 text-secondary font-label-telemetry-sm text-label-telemetry-sm uppercase">
+<th class="py-2 pr-space-md">Time (UTC)</th>
+<th class="py-2 pr-space-md">Event Milestone</th>
+<th class="py-2 pr-space-md">Source / Node</th>
+<th class="py-2">Status</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-secondary/10">
+<tr>
+<td class="py-2 pr-space-md font-headline-sm text-body-sm text-primary">14:02 UTC</td>
+<td class="py-2 pr-space-md text-on-surface font-medium">Telemetry Ingest &amp; Contour Sweep</td>
+<td class="py-2 pr-space-md text-secondary">Drone VAL-04 Stream</td>
+<td class="py-2"><span class="px-1.5 py-0.5 rounded bg-secondary-container text-secondary font-label-telemetry-sm text-label-telemetry-sm">INGESTED</span></td>
+</tr>
+<tr>
+<td class="py-2 pr-space-md font-headline-sm text-body-sm text-primary">14:07 UTC</td>
+<td class="py-2 pr-space-md text-on-surface font-medium">Visual &amp; Thermal Detection #DET-01</td>
+<td class="py-2 pr-space-md text-secondary">YOLOv8-Alpine SAR Core</td>
+<td class="py-2"><span class="px-1.5 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-telemetry-sm text-label-telemetry-sm">DETECTED</span></td>
+</tr>
+<tr>
+<td class="py-2 pr-space-md font-headline-sm text-body-sm text-primary">14:15 UTC</td>
+<td class="py-2 pr-space-md text-on-surface font-medium">Ops Manager Sign-off &amp; Triage Audit</td>
+<td class="py-2 pr-space-md text-secondary">Mission Control Desk</td>
+<td class="py-2"><span class="px-1.5 py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-label-telemetry-sm text-label-telemetry-sm">CONFIRMED</span></td>
+</tr>
+<tr>
+<td class="py-2 pr-space-md font-headline-sm text-body-sm text-primary">14:22 UTC</td>
+<td class="py-2 pr-space-md text-on-surface font-medium">Field Dispatch Handover to Alpine Alpha</td>
+<td class="py-2 pr-space-md text-secondary">Tactical Comm Relay</td>
+<td class="py-2"><span class="px-1.5 py-0.5 rounded bg-primary text-surface font-label-telemetry-sm text-label-telemetry-sm">DISPATCHED</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Official Dossier Footer Watermark -->
+<div class="flex items-center justify-between pt-space-xs text-secondary font-label-telemetry-sm text-label-telemetry-sm uppercase border-t border-secondary/20">
+<span>ELECTRONIC SIGNATURE: 0x9F41E8C2B3A70098</span>
+<span>PAGE 1 OF 1 // AUDITED DOSSIER</span>
+</div>
+</div>
+<!-- Document Actions Bar (Fixed below dossier sheet) -->
+<div class="bg-surface-container rounded p-space-md flex flex-wrap items-center justify-between gap-space-sm shadow-sm">
+<div class="flex items-center gap-space-xs text-secondary font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span>Package validated for Air-Glaciers &amp; Rega Rescue Handover</span>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm">
+<button class="px-space-md py-space-xs rounded bg-surface-container-high hover:bg-surface-container-highest text-secondary border border-secondary font-label-telemetry-sm text-label-telemetry-sm uppercase tracking-wider transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">share</span>
+<span>Share Secure Access Link</span>
+</button>
+<button class="px-space-md py-space-xs rounded bg-surface-container-high hover:bg-surface-container-highest text-secondary border border-secondary font-label-telemetry-sm text-label-telemetry-sm uppercase tracking-wider transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">print</span>
+<span>Print / Export STANAG</span>
+</button>
+<button class="px-space-lg py-space-xs rounded bg-primary hover:opacity-95 text-surface font-headline-sm text-body-md font-bold tracking-tight shadow-sm transition-all flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px]">download_for_offline</span>
+<span>Download Evidence Dossier (PDF)</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "inverse-primary": "#fcb799", "on-secondary-fixed": "#111e1a", "surface-container-highest": "#dae6d9", "tertiary-fixed": "#ffdea9", "on-secondary": "#ffffff", "tertiary": "#715829", "on-surface-variant": "#52443e", "secondary-container": "#d7e6e0", "surface-dim": "#d1ddd1", "error-container": "#ffdad6", "inverse-surface": "#28332a", "tertiary-container": "#8c703f", "on-tertiary-container": "#fffbff", "inverse-on-surface": "#e8f4e7", "on-tertiary-fixed": "#271900", "background": "#f0fdef", "surface-variant": "#dae6d9", "primary-container": "#a0674e", "surface-tint": "#86513a", "on-primary-fixed": "#351001", "surface-container-high": "#dfebdf", "on-tertiary-fixed-variant": "#5a4316", "surface-bright": "#f0fdef", "on-primary-container": "#fffbff", "outline-variant": "#d7c2bb", "surface-container-low": "#ebf7ea", "on-background": "#141e16", "on-secondary-container": "#596762", "on-error-container": "#93000a", "primary": "#834f37", "on-primary-fixed-variant": "#6a3a24", "on-tertiary": "#ffffff", "primary-fixed-dim": "#fcb799", "outline": "#84746d", "error": "#ba1a1a", "secondary": "#54615d", "on-secondary-fixed-variant": "#3c4a45", "on-primary": "#ffffff", "on-error": "#ffffff", "primary-fixed": "#ffdbcd", "tertiary-fixed-dim": "#e4c289", "secondary-fixed": "#d7e6e0", "on-surface": "#141e16", "surface": "#f0fdef", "secondary-fixed-dim": "#bbcac4", "surface-container-lowest": "#ffffff", "surface-container": "#e5f1e4" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "gutter": "1rem", "space-xl": "2.5rem", "margin-desktop": "2rem", "space-xs": "0.25rem", "space-lg": "1.5rem", "margin": "1rem", "space-md": "1rem", "space-sm": "0.5rem", "gutter-desktop": "1.5rem" }, "fontFamily": { "headline-sm": ["Space Grotesk"], "body-lg": ["Manrope"], "headline-lg": ["Space Grotesk"], "body-md": ["Manrope"], "headline-md": ["Space Grotesk"], "display-hero-mobile": ["Space Grotesk"], "label-telemetry-sm": ["Space Grotesk"], "label-telemetry-lg": ["Space Grotesk"], "display-hero": ["Space Grotesk"], "body-sm": ["Manrope"], "data-metric": ["Space Grotesk"], "headline-lg-mobile": ["Space Grotesk"] }, "fontSize": { "headline-sm": ["18px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "500" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "400" }], "headline-md": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "display-hero-mobile": ["32px", { "lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-telemetry-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.08em", "fontWeight": "700" }], "label-telemetry-lg": ["14px", { "lineHeight": "18px", "letterSpacing": "0.06em", "fontWeight": "600" }], "display-hero": ["48px", { "lineHeight": "52px", "letterSpacing": "-0.03em", "fontWeight": "700" }], "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "400" }], "data-metric": ["28px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-lg-mobile": ["24px", { "lineHeight": "30px", "letterSpacing": "-0.01em", "fontWeight": "600" }] } } } }</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low border-r border-outline-variant/30 z-50 flex flex-col justify-between p-space-md"><div class="flex flex-col gap-space-lg"><div class="flex items-center gap-space-sm px-space-xs py-space-xs"><div class="w-9 h-9 rounded bg-secondary flex items-center justify-center text-on-secondary"><span class="material-symbols-outlined text-[20px]">filter_center_focus</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface">SkySnR</span><span class="font-label-telemetry-sm text-label-telemetry-sm uppercase tracking-wider text-secondary">Vision Operations</span></div></div><nav class="flex flex-col gap-space-xs" data-active-classes="bg-secondary-container text-on-secondary-fixed-variant font-semibold"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="font-body-md text-body-md">Dashboard</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="mission-analysis" href="#"><span class="material-symbols-outlined text-[20px]">radar</span><span class="font-body-md text-body-md">Mission Analysis</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-space-sm rounded transition-colors bg-secondary-container text-on-secondary-fixed-variant font-semibold" data-path="incidents" href="#"><span class="material-symbols-outlined text-[20px]">assignment_late</span><span class="font-body-md text-body-md">Incidents</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="reports" href="#"><span class="material-symbols-outlined text-[20px]">description</span><span class="font-body-md text-body-md">Reports</span></a></nav></div><div class="border-t border-outline-variant/30 pt-space-md flex flex-col gap-space-sm"><div class="flex items-center gap-space-sm px-space-xs"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="flex flex-col overflow-hidden"><span class="font-body-md text-body-md font-medium text-on-surface truncate">Cdr. E. Mercer</span><span class="font-body-sm text-body-sm text-secondary truncate">Rescue Operations Mgr</span></div></div><button class="flex items-center justify-center gap-space-xs w-full py-space-xs px-space-sm rounded bg-surface-container-high text-on-surface hover:bg-surface-variant transition-colors"><span class="material-symbols-outlined text-[16px]">logout</span><span class="font-label-telemetry-sm text-label-telemetry-sm uppercase tracking-wider">Sign Out</span></button></div></aside><div class="pl-72 flex flex-col min-h-screen"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/85 backdrop-blur-md border-b border-outline-variant/30 z-40 px-space-lg flex items-center justify-between"><div class="flex items-center gap-space-md"><span class="font-label-telemetry-sm text-label-telemetry-sm uppercase tracking-wider text-secondary">Mission Desk</span><span class="text-outline-variant">/</span><div class="relative flex items-center"><select class="appearance-none bg-surface-container-low border border-outline-variant/40 rounded px-space-md py-space-xs pr-space-xl font-body-sm text-body-sm text-on-surface focus:outline-none focus:border-primary"><option>Sector-09 Alpine Sweep (Active)</option><option>Cascade Glacier Grid-4</option><option>Northern Ridge Extraction</option></select><span class="material-symbols-outlined absolute right-space-xs text-[18px] text-secondary pointer-events-none">arrow_drop_down</span></div></div><div class="flex items-center gap-space-md"><button class="relative p-space-xs rounded hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-primary"></span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="relative pt-16 bg-surface-container-low/40 min-h-screen px-space-lg py-space-md w-full"><div class="flex flex-col w-full">
+<!-- Top Operational Control Bar -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md mb-space-lg pb-space-sm">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="inline-block w-2.5 h-2.5 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-telemetry-sm text-label-telemetry-sm uppercase tracking-widest text-secondary font-semibold">SkySnR Vision Operations // Telemetry Stream Active</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg tracking-tight text-on-surface">Incident Management</h1>
+<p class="font-body-md text-body-md text-secondary max-w-2xl">
+        Review confirmed incidents, assign tactical response operators, and coordinate drone-assisted alpine extractions.
+      </p>
+</div>
+<!-- Quick Stats Telemetry Pockets -->
+<div class="flex items-center gap-space-sm self-start md:self-auto">
+<div class="bg-surface-container px-space-md py-space-xs rounded flex flex-col min-w-[110px]">
+<span class="font-label-telemetry-sm text-label-telemetry-sm uppercase text-secondary">Awaiting Assign</span>
+<span class="font-data-metric text-data-metric text-primary leading-tight">02</span>
+</div>
+<div class="bg-surface-container px-space-md py-space-xs rounded flex flex-col min-w-[110px]">
+<span class="font-label-telemetry-sm text-label-telemetry-sm uppercase text-secondary">Active Field Ops</span>
+<span class="font-data-metric text-data-metric text-tertiary leading-tight">03</span>
+</div>
+<div class="bg-surface-container px-space-md py-space-xs rounded flex flex-col min-w-[110px]">
+<span class="font-label-telemetry-sm text-label-telemetry-sm uppercase text-secondary">Mean Resolve</span>
+<span class="font-data-metric text-data-metric text-secondary leading-tight">46m</span>
+</div>
+</div>
+</div>
+<!-- Status Filter Navigation Strip -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm bg-surface-container-high p-space-xs rounded mb-space-md">
+<div class="flex flex-wrap items-center gap-space-xs" id="statusFilterGroup">
+<button class="px-space-md py-space-xs rounded font-label-telemetry-sm text-label-telemetry-sm uppercase tracking-wider text-secondary transition-all hover:bg-surface-variant" onclick="filterStatus('all', this)">
+        All (6)
+      </button>
+<button class="filter-btn-active px-space-md py-space-xs rounded font-label-telemetry-sm text-label-telemetry-sm uppercase tracking-wider bg-primary text-on-primary shadow-sm transition-all flex items-center gap-1.5" onclick="filterStatus('pending', this)">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed"></span>
+        Pending Assignment (2)
+      </button>
+<button class="px-space-md py-space-xs rounded font-label-telemetry-sm text-label-telemetry-sm uppercase tracking-wider text-secondary transition-all hover:bg-surface-variant" onclick="filterStatus('assigned', this)">
+        Assigned (2)
+      </button>
+<button class="px-space-md py-space-xs rounded font-label-telemetry-sm text-label-telemetry-sm uppercase tracking-wider text-secondary transition-all hover:bg-surface-variant" onclick="filterStatus('inprogress', this)">
+        In Progress (1)
+      </button>
+<button class="px-space-md py-space-xs rounded font-label-telemetry-sm text-label-telemetry-sm uppercase tracking-wider text-secondary transition-all hover:bg-surface-variant" onclick="filterStatus('resolved', this)">
+        Resolved (1)
+      </button>
+</div>
+<!-- Telemetry Search Input -->
+<div class="flex items-center gap-space-xs px-space-sm py-1 bg-surface-container rounded min-w-[240px]">
+<span class="material-symbols-outlined text-[18px] text-secondary">search</span>
+<input class="bg-transparent font-body-sm text-body-sm text-on-surface placeholder:text-secondary/60 focus:outline-none w-full" placeholder="FILTER BY ID, SECTOR, OR TERRAIN..." type="text"/>
+<span class="font-label-telemetry-sm text-label-telemetry-sm text-secondary px-1 bg-surface-variant rounded">⌘K</span>
+</div>
+</div>
+<!-- Primary Asymmetric Two-Column Mission Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md w-full items-start">
+<!-- Left 55% Column: Incident Ledger -->
+<div class="lg:col-span-7 flex flex-col gap-space-xs">
+<div class="bg-surface-container rounded overflow-hidden">
+<!-- Table Header Bar -->
+<div class="bg-surface-container-high px-space-md py-space-sm grid grid-cols-12 text-left font-label-telemetry-sm text-label-telemetry-sm uppercase tracking-wider text-secondary">
+<div class="col-span-2">Incident ID</div>
+<div class="col-span-3">Mission Focus</div>
+<div class="col-span-2">Severity</div>
+<div class="col-span-2">Operator</div>
+<div class="col-span-2">Status</div>
+<div class="col-span-1 text-right">View</div>
+</div>
+<!-- Incident Items -->
+<div class="divide-y divide-outline-variant/20 flex flex-col" id="incidentLedgerList">
+<!-- Row 1: Selected / INC-792 -->
+<div class="incident-row cursor-pointer grid grid-cols-12 items-center px-space-md py-space-sm bg-secondary-container text-on-secondary-fixed transition-colors" id="row-792" onclick="selectIncident('792')">
+<div class="col-span-2 flex items-center gap-space-xs">
+<span class="w-1.5 h-3 bg-primary rounded-full"></span>
+<span class="font-headline-sm text-headline-sm font-semibold tracking-tight text-on-secondary-fixed">#INC-792</span>
+</div>
+<div class="col-span-3 flex flex-col pr-1">
+<span class="font-body-md text-body-md font-medium text-on-secondary-fixed truncate">Mont Collon Crevasse</span>
+<span class="font-body-sm text-body-sm text-secondary truncate">Sector 09 • Alpine High Peak</span>
+</div>
+<div class="col-span-2 flex items-center">
+<span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-primary-fixed text-on-primary-fixed-variant font-label-telemetry-sm text-label-telemetry-sm font-bold uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                High 85
+              </span>
+</div>
+<div class="col-span-2 flex flex-col">
+<span class="font-body-sm text-body-sm text-primary font-medium italic">Unassigned</span>
+<span class="font-label-telemetry-sm text-label-telemetry-sm text-secondary">REQ DISPATCH</span>
+</div>
+<div class="col-span-2">
+<span class="inline-block px-1.5 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-telemetry-sm text-label-telemetry-sm font-semibold uppercase">
+                Pending
+              </span>
+</div>
+<div class="col-span-1 text-right">
+<button class="p-1 rounded hover:bg-surface text-secondary">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Row 2: INC-789 -->
+<div class="incident-row cursor-pointer grid grid-cols-12 items-center px-space-md py-space-sm bg-surface-container hover:bg-surface-container-high transition-colors" id="row-789" onclick="selectIncident('789')">
+<div class="col-span-2 flex items-center gap-space-xs">
+<span class="w-1.5 h-3 bg-transparent rounded-full"></span>
+<span class="font-headline-sm text-headline-sm font-semibold tracking-tight text-on-surface">#INC-789</span>
+</div>
+<div class="col-span-3 flex flex-col pr-1">
+<span class="font-body-md text-body-md font-medium text-on-surface truncate">Arolla Glacier Fall</span>
+<span class="font-body-sm text-body-sm text-secondary truncate">Sector 04 • Glacial Cirque</span>
+</div>
+<div class="col-span-2 flex items-center">
+<span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-primary-fixed text-on-primary-fixed-variant font-label-telemetry-sm text-label-telemetry-sm font-bold uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                High 78
+              </span>
+</div>
+<div class="col-span-2 flex flex-col">
+<span class="font-body-sm text-body-sm text-primary font-medium italic">Unassigned</span>
+<span class="font-label-telemetry-sm text-label-telemetry-sm text-secondary">TRIAGE DONE</span>
+</div>
+<div class="col-span-2">
+<span class="inline-block px-1.5 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-telemetry-sm text-label-telemetry-sm font-semibold uppercase">
+                Pending
+              </span>
+</div>
+<div class="col-span-1 text-right">
+<button class="p-1 rounded hover:bg-surface text-secondary">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Row 3: INC-788 -->
+<div class="incident-row cursor-pointer grid grid-cols-12 items-center px-space-md py-space-sm bg-surface-container hover:bg-surface-container-high transition-colors" id="row-788" onclick="selectIncident('788')">
+<div class="col-span-2 flex items-center gap-space-xs">
+<span class="w-1.5 h-3 bg-transparent rounded-full"></span>
+<span class="font-headline-sm text-headline-sm font-semibold tracking-tight text-on-surface">#INC-788</span>
+</div>
+<div class="col-span-3 flex flex-col pr-1">
+<span class="font-body-md text-body-md font-medium text-on-surface truncate">Valais Glacial Ridge</span>
+<span class="font-body-sm text-body-sm text-secondary truncate">Sector 11 • Moraine Trail</span>
+</div>
+<div class="col-span-2 flex items-center">
+<span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-primary-fixed text-on-primary-fixed-variant font-label-telemetry-sm text-label-telemetry-sm font-bold uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                High 72
+              </span>
+</div>
+<div class="col-span-2 flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface font-semibold">Marc Steiner</span>
+<span class="font-label-telemetry-sm text-label-telemetry-sm text-secondary">VALKYRIE-02</span>
+</div>
+<div class="col-span-2">
+<span class="inline-block px-1.5 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed-variant font-label-telemetry-sm text-label-telemetry-sm font-semibold uppercase">
+                Assigned
+              </span>
+</div>
+<div class="col-span-1 text-right">
+<button class="p-1 rounded hover:bg-surface text-secondary">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Row 4: INC-785 -->
+<div class="incident-row cursor-pointer grid grid-cols-12 items-center px-space-md py-space-sm bg-surface-container hover:bg-surface-container-high transition-colors" id="row-785" onclick="selectIncident('785')">
+<div class="col-span-2 flex items-center gap-space-xs">
+<span class="w-1.5 h-3 bg-transparent rounded-full"></span>
+<span class="font-headline-sm text-headline-sm font-semibold tracking-tight text-on-surface">#INC-785</span>
+</div>
+<div class="col-span-3 flex flex-col pr-1">
+<span class="font-body-md text-body-md font-medium text-on-surface truncate">Rhine Basin Sector B</span>
+<span class="font-body-sm text-body-sm text-secondary truncate">Lower Valley • River Basin</span>
+</div>
+<div class="col-span-2 flex items-center">
+<span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-telemetry-sm text-label-telemetry-sm font-bold uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+                Med 55
+              </span>
+</div>
+<div class="col-span-2 flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface font-semibold">Elena Varga</span>
+<span class="font-label-telemetry-sm text-label-telemetry-sm text-secondary">AQUILA-01</span>
+</div>
+<div class="col-span-2">
+<span class="inline-block px-1.5 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed-variant font-label-telemetry-sm text-label-telemetry-sm font-semibold uppercase">
+                In Progress
+              </span>
+</div>
+<div class="col-span-1 text-right">
+<button class="p-1 rounded hover:bg-surface text-secondary">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Row 5: INC-781 -->
+<div class="incident-row cursor-pointer grid grid-cols-12 items-center px-space-md py-space-sm bg-surface-container hover:bg-surface-container-high transition-colors" id="row-781" onclick="selectIncident('781')">
+<div class="col-span-2 flex items-center gap-space-xs">
+<span class="w-1.5 h-3 bg-transparent rounded-full"></span>
+<span class="font-headline-sm text-headline-sm font-semibold tracking-tight text-on-surface">#INC-781</span>
+</div>
+<div class="col-span-3 flex flex-col pr-1">
+<span class="font-body-md text-body-md font-medium text-on-surface truncate">Sion Urban Collapse</span>
+<span class="font-body-sm text-body-sm text-secondary truncate">District 3 • Industrial Zone</span>
+</div>
+<div class="col-span-2 flex items-center">
+<span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-telemetry-sm text-label-telemetry-sm font-bold uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+                Med 48
+              </span>
+</div>
+<div class="col-span-2 flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface font-semibold">Thomas Meyer</span>
+<span class="font-label-telemetry-sm text-label-telemetry-sm text-secondary">ROVER-06</span>
+</div>
+<div class="col-span-2">
+<span class="inline-block px-1.5 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed-variant font-label-telemetry-sm text-label-telemetry-sm font-semibold uppercase">
+                In Progress
+              </span>
+</div>
+<div class="col-span-1 text-right">
+<button class="p-1 rounded hover:bg-surface text-secondary">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Row 6: INC-770 -->
+<div class="incident-row cursor-pointer grid grid-cols-12 items-center px-space-md py-space-sm bg-surface-container hover:bg-surface-container-high transition-colors" id="row-770" onclick="selectIncident('770')">
+<div class="col-span-2 flex items-center gap-space-xs">
+<span class="w-1.5 h-3 bg-transparent rounded-full"></span>
+<span class="font-headline-sm text-headline-sm font-semibold tracking-tight text-on-surface">#INC-770</span>
+</div>
+<div class="col-span-3 flex flex-col pr-1">
+<span class="font-body-md text-body-md font-medium text-on-surface truncate">Zermatt Moraine</span>
+<span class="font-body-sm text-body-sm text-secondary truncate">Sector 02 • South Glacier Pass</span>
+</div>
+<div class="col-span-2 flex items-center">
+<span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-surface-variant text-secondary font-label-telemetry-sm text-label-telemetry-sm font-bold uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                Low 32
+              </span>
+</div>
+<div class="col-span-2 flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface font-semibold">Sophie Allemann</span>
+<span class="font-label-telemetry-sm text-label-telemetry-sm text-secondary">DISPATCH TEAM C</span>
+</div>
+<div class="col-span-2">
+<span class="inline-block px-1.5 py-0.5 rounded bg-surface-variant text-secondary font-label-telemetry-sm text-label-telemetry-sm font-semibold uppercase">
+                Resolved
+              </span>
+</div>
+<div class="col-span-1 text-right">
+<button class="p-1 rounded hover:bg-surface text-secondary">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Ledger Footer Information Strip -->
+<div class="px-space-md py-space-xs bg-surface-container-high flex items-center justify-between font-label-telemetry-sm text-label-telemetry-sm text-secondary">
+<div class="flex items-center gap-space-sm">
+<span>SHOWING 6 OF 14 TOTAL RECORDS</span>
+<span>•</span>
+<span>SAR DB NODE: VALAIS-CORE-01</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="px-2 py-0.5 rounded bg-surface-container hover:bg-surface text-on-surface">PREV</button>
+<button class="px-2 py-0.5 rounded bg-surface-container hover:bg-surface text-on-surface">NEXT</button>
+</div>
+</div>
+</div>
+<!-- Terrain Telemetry Micro-Card -->
+<div class="grid grid-cols-3 gap-space-sm mt-space-xs">
+<div class="bg-surface-container p-space-sm rounded flex flex-col">
+<span class="font-label-telemetry-sm text-label-telemetry-sm uppercase text-secondary">Current Gust Vector</span>
+<div class="flex items-center justify-between mt-1">
+<span class="font-headline-sm text-headline-sm text-on-surface">34.2 kt NW</span>
+<span class="material-symbols-outlined text-[20px] text-tertiary">air</span>
+</div>
+</div>
+<div class="bg-surface-container p-space-sm rounded flex flex-col">
+<span class="font-label-telemetry-sm text-label-telemetry-sm uppercase text-secondary">Cloud Ceiling</span>
+<div class="flex items-center justify-between mt-1">
+<span class="font-headline-sm text-headline-sm text-on-surface">3,240 m MSL</span>
+<span class="material-symbols-outlined text-[20px] text-secondary">cloud</span>
+</div>
+</div>
+<div class="bg-surface-container p-space-sm rounded flex flex-col">
+<span class="font-label-telemetry-sm text-label-telemetry-sm uppercase text-secondary">Fleet Readiness</span>
+<div class="flex items-center justify-between mt-1">
+<span class="font-headline-sm text-headline-sm text-primary font-bold">5 / 6 Available</span>
+<span class="material-symbols-outlined text-[20px] text-primary">flight_takeoff</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Right 45% Column: Incident Detail Drawer Panel -->
+<div class="lg:col-span-5 flex flex-col gap-space-sm">
+<div class="bg-surface-container rounded p-space-md shadow-sm flex flex-col gap-space-md">
+<!-- Top Header & Action Controls -->
+<div class="flex items-start justify-between pb-space-xs border-b border-outline-variant/30">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs mb-1">
+<span class="px-1.5 py-0.5 rounded bg-primary text-on-primary font-label-telemetry-sm text-label-telemetry-sm uppercase tracking-wider font-bold">
+                INC-792
+              </span>
+<span class="font-label-telemetry-sm text-label-telemetry-sm text-secondary uppercase tracking-widest font-semibold">Alpine SAR Sector 09</span>
+</div>
+<h2 class="font-headline-md text-headline-md font-semibold text-on-surface leading-tight">
+              Mont Collon Crevasse
+            </h2>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="p-1.5 rounded bg-surface-container-high hover:bg-surface-variant text-secondary" title="Print Incident Manifest">
+<span class="material-symbols-outlined text-[18px]">print</span>
+</button>
+<button class="p-1.5 rounded bg-surface-container-high hover:bg-surface-variant text-secondary" title="Share Telemetry Feed">
+<span class="material-symbols-outlined text-[18px]">share</span>
+</button>
+</div>
+</div>
+<!-- Evidence Drone Aerial View Frame with HUD overlays -->
+<div class="relative w-full h-52 rounded overflow-hidden bg-surface-dim">
+<img class="w-full h-full object-cover" data-alt="High-resolution aerial reconnaissance drone camera frame of a jagged alpine crevasse on Mont Collon glacier, featuring snow drifts, blue-gray glacial ice lips, with a subtle digital reticle highlighting a stranded climber figure wrapped in cold-weather survival gear, bathed in stark alpine daylight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAI6L8-oh-X6TUEkV67Uf29kLgrJiHfe857L84UXWY11-_lrzLeR_TRw8wBxpcgRNJOy4efkAZeV47BOjoD-u7zyySJgV_KktRUys1fvdK1UUC0AOqjztFEBawA0Qd_uTPP7fLKZeNuYY-z-lVa-BCCEJVQOt_nFRjBPCS2RjoCWldhyb-orPMqhaqvK0RuGtxpyBJzjDkqA1r6Z0pFAEims8QugMzyaSVoKYv9Mi641zDEclXxAoXb"/>
+<!-- Tactical HUD Layer -->
+<div class="absolute inset-0 p-space-sm flex flex-col justify-between pointer-events-none bg-gradient-to-t from-inverse-surface/80 via-transparent to-inverse-surface/40">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5 bg-surface/85 backdrop-blur-md px-2 py-1 rounded">
+<span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+<span class="font-label-telemetry-sm text-label-telemetry-sm text-on-surface uppercase font-bold">LIVE OPTICAL PASS // VALKYRIE-04</span>
+</div>
+<span class="font-label-telemetry-sm text-label-telemetry-sm bg-surface/85 backdrop-blur-md px-2 py-1 rounded text-secondary font-mono">
+                FOV 44° • ELEV 3,120m
+              </span>
+</div>
+<!-- Optical Reticle Indicator -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 border border-tertiary/80 rounded flex items-center justify-center">
+<div class="w-1 h-1 bg-primary rounded-full"></div>
+<span class="absolute -top-3 left-1/2 -translate-x-1/2 font-label-telemetry-sm text-[9px] bg-tertiary-container text-on-tertiary-container px-1 rounded">CONFIRMED BIO</span>
+</div>
+<div class="flex items-end justify-between">
+<div class="flex flex-col bg-surface/85 backdrop-blur-md px-2 py-1 rounded">
+<span class="font-label-telemetry-sm text-[10px] text-secondary uppercase">GEO COORDINATES</span>
+<span class="font-label-telemetry-sm text-label-telemetry-sm text-on-surface font-mono font-bold tracking-tight">46°12'24.8"N 07°45'11.2"E</span>
+</div>
+<span class="font-label-telemetry-sm text-label-telemetry-sm bg-primary text-on-primary px-2 py-1 rounded font-semibold uppercase">
+                EXPOSURE CRITICAL
+              </span>
+</div>
+</div>
+</div>
+<!-- Priority Assessment Box -->
+<div class="bg-surface-container-high p-space-sm rounded flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-telemetry-sm text-label-telemetry-sm uppercase tracking-wider text-secondary">Neural Risk Score</span>
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm text-primary font-bold">85 / 100</span>
+<span class="px-1.5 py-0.5 rounded bg-primary text-on-primary font-label-telemetry-sm text-label-telemetry-sm font-semibold uppercase">CRITICAL TIER</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Person stranded within 1.8 meters of active crevasse lip. High exposure hazard from windchill (-11°C) with declining sunlight window. Immediate rope team dispatch recommended.
+          </p>
+<div class="mt-space-xs pt-space-xs border-t border-outline-variant/30 flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-tertiary shrink-0 mt-0.5">explore</span>
+<div class="flex flex-col">
+<span class="font-label-telemetry-sm text-label-telemetry-sm uppercase font-bold text-secondary">Terrain Extraction Guidance</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Specialist mountain rigging required. Recommended approach via West Saddle to avoid cornice fractures.</span>
+</div>
+</div>
+</div>
+<!-- Rescue Team Assignment Module -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-primary">groups</span>
+<span class="font-label-telemetry-sm text-label-telemetry-sm uppercase tracking-wider text-on-surface font-bold">Assign Tactical Lead</span>
+</div>
+<span class="font-label-telemetry-sm text-label-telemetry-sm text-secondary">5 AVAILABLE OPERATORS</span>
+</div>
+<!-- Operator Selection Radio Stack -->
+<div class="flex flex-col gap-1.5" id="operatorCandidateList">
+<!-- Candidate 1: Lukas Bieri (Recommended & Selected) -->
+<label class="operator-option relative flex items-center justify-between p-space-sm rounded bg-surface-container-highest cursor-pointer hover:bg-surface-variant transition-colors ring-2 ring-primary">
+<div class="flex items-center gap-space-sm">
+<input checked="" class="accent-primary w-4 h-4" name="assignedMember" type="radio" value="Lukas Bieri"/>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-body-md text-body-md font-semibold text-on-surface">Lukas Bieri</span>
+<span class="px-1 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-telemetry-sm text-[9px] uppercase font-bold">Recommended</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary">Alpine High-Angle Specialist • Station 02</span>
+</div>
+</div>
+<div class="flex flex-col text-right">
+<span class="font-label-telemetry-sm text-label-telemetry-sm font-bold text-secondary">0 ASSIGNED</span>
+<span class="font-label-telemetry-sm text-[10px] text-primary uppercase font-bold">STANDBY</span>
+</div>
+</label>
+<!-- Candidate 2: Sophie Allemann -->
+<label class="operator-option relative flex items-center justify-between p-space-sm rounded bg-surface-container-high cursor-pointer hover:bg-surface-variant transition-colors">
+<div class="flex items-center gap-space-sm">
+<input class="accent-primary w-4 h-4" name="assignedMember" type="radio" value="Sophie Allemann"/>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-semibold text-on-surface">Sophie Allemann</span>
+<span class="font-body-sm text-body-sm text-secondary">Medical Evacuation Lead • Air Glacier Base</span>
+</div>
+</div>
+<div class="flex flex-col text-right">
+<span class="font-label-telemetry-sm text-label-telemetry-sm font-semibold text-secondary">1 ASSIGNED</span>
+<span class="font-label-telemetry-sm text-[10px] text-secondary uppercase">MODERATE</span>
+</div>
+</label>
+<!-- Candidate 3: Thomas Meyer -->
+<label class="operator-option relative flex items-center justify-between p-space-sm rounded bg-surface-container-high cursor-pointer hover:bg-surface-variant transition-colors">
+<div class="flex items-center gap-space-sm">
+<input class="accent-primary w-4 h-4" name="assignedMember" type="radio" value="Thomas Meyer"/>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-semibold text-on-surface">Thomas Meyer</span>
+<span class="font-body-sm text-body-sm text-secondary">Urban &amp; Drone Recon Specialist</span>
+</div>
+</div>
+<div class="flex flex-col text-right">
+<span class="font-label-telemetry-sm text-label-telemetry-sm font-semibold text-secondary">1 ASSIGNED</span>
+<span class="font-label-telemetry-sm text-[10px] text-secondary uppercase">MODERATE</span>
+</div>
+</label>
+<!-- Candidate 4: Elena Varga -->
+<label class="operator-option relative flex items-center justify-between p-space-sm rounded bg-surface-container-high cursor-pointer hover:bg-surface-variant transition-colors opacity-75">
+<div class="flex items-center gap-space-sm">
+<input class="accent-primary w-4 h-4" name="assignedMember" type="radio" value="Elena Varga"/>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-semibold text-on-surface">Elena Varga</span>
+<span class="font-body-sm text-body-sm text-secondary">Fast Sweep Coordinator</span>
+</div>
+</div>
+<div class="flex flex-col text-right">
+<span class="font-label-telemetry-sm text-label-telemetry-sm font-semibold text-secondary">2 ASSIGNED</span>
+<span class="font-label-telemetry-sm text-[10px] text-tertiary uppercase font-bold">BUSY</span>
+</div>
+</label>
+<!-- Candidate 5: Marc Steiner -->
+<label class="operator-option relative flex items-center justify-between p-space-sm rounded bg-surface-container-high cursor-pointer hover:bg-surface-variant transition-colors opacity-75">
+<div class="flex items-center gap-space-sm">
+<input class="accent-primary w-4 h-4" name="assignedMember" type="radio" value="Marc Steiner"/>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-semibold text-on-surface">Marc Steiner</span>
+<span class="font-body-sm text-body-sm text-secondary">Glacial Rescue Commander</span>
+</div>
+</div>
+<div class="flex flex-col text-right">
+<span class="font-label-telemetry-sm text-label-telemetry-sm font-semibold text-secondary">2 ASSIGNED</span>
+<span class="font-label-telemetry-sm text-[10px] text-primary uppercase font-bold">HIGH LOAD</span>
+</div>
+</label>
+</div>
+<!-- Confirm Assignment Button (Critical Action in Warm Terracotta) -->
+<div class="pt-space-xs">
+<button class="w-full py-space-sm px-space-md rounded bg-primary text-on-primary font-headline-sm text-headline-sm font-semibold tracking-wide hover:opacity-95 active:scale-[0.99] transition-all flex items-center justify-center gap-space-sm shadow-sm" id="confirmAssignBtn" onclick="confirmDispatch()">
+<span class="material-symbols-outlined text-[20px]">person_check</span>
+<span>Confirm Assignment to Lukas Bieri</span>
+</button>
+</div>
+</div>
+<!-- Incident Auditable Event Trail / Timeline -->
+<div class="bg-surface-container-high p-space-sm rounded flex flex-col gap-space-xs">
+<div class="flex items-center justify-between pb-1 border-b border-outline-variant/30">
+<span class="font-label-telemetry-sm text-label-telemetry-sm uppercase tracking-wider text-secondary">Auditable Event Timeline</span>
+<span class="font-label-telemetry-sm text-label-telemetry-sm text-secondary font-mono">UTC SYNCHRONIZED</span>
+</div>
+<div class="relative pl-4 space-y-3 mt-1 before:absolute before:left-1.5 before:top-2 before:bottom-2 before:w-0.5 before:bg-outline-variant/40">
+<!-- Event 1 -->
+<div class="relative flex flex-col">
+<span class="absolute -left-4 top-1.5 w-2 h-2 rounded-full bg-secondary"></span>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-label-telemetry-sm text-label-telemetry-sm font-mono text-secondary">14:02 UTC</span>
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">Detection Created</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary">Valkyrie-04 Optical pass verified target bio-signature.</span>
+</div>
+<!-- Event 2 -->
+<div class="relative flex flex-col">
+<span class="absolute -left-4 top-1.5 w-2 h-2 rounded-full bg-tertiary"></span>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-label-telemetry-sm text-label-telemetry-sm font-mono text-secondary">14:07 UTC</span>
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">Priority Calculated</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary">Algorithmic risk model generated Score 85 // Critical Tier.</span>
+</div>
+<!-- Event 3 -->
+<div class="relative flex flex-col">
+<span class="absolute -left-4 top-1.5 w-2 h-2 rounded-full bg-primary"></span>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-label-telemetry-sm text-label-telemetry-sm font-mono text-secondary">14:15 UTC</span>
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">Incident Confirmed</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary">Commander E. Mercer authorized active extraction protocol.</span>
+</div>
+<!-- Event 4 (Current) -->
+<div class="relative flex flex-col" id="timelineActiveEvent">
+<span class="absolute -left-4 top-1.5 w-2 h-2 rounded-full bg-primary animate-ping"></span>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-label-telemetry-sm text-label-telemetry-sm font-mono text-primary font-bold">14:22 UTC</span>
+<span class="font-body-sm text-body-sm font-semibold text-primary">Pending Assignment to Lukas Bieri</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary">Direct paging packet ready for transmission to alpine unit.</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive JavaScript Handler -->
+<script>
+    function filterStatus(status, btn) {
+      const container = document.getElementById('statusFilterGroup');
+      const buttons = container.querySelectorAll('button');
+      buttons.forEach(b => {
+        b.className = 'px-space-md py-space-xs rounded font-label-telemetry-sm text-label-telemetry-sm uppercase tracking-wider text-secondary transition-all hover:bg-surface-variant';
+      });
+      btn.className = 'filter-btn-active px-space-md py-space-xs rounded font-label-telemetry-sm text-label-telemetry-sm uppercase tracking-wider bg-primary text-on-primary shadow-sm transition-all flex items-center gap-1.5';
+    }
+
+    function selectIncident(id) {
+      document.querySelectorAll('.incident-row').forEach(row => {
+        row.classList.remove('bg-secondary-container', 'text-on-secondary-fixed');
+        row.classList.add('bg-surface-container', 'hover:bg-surface-container-high');
+        const indicator = row.querySelector('.col-span-2 span:first-child');
+        if (indicator) indicator.className = 'w-1.5 h-3 bg-transparent rounded-full';
+      });
+
+      const selected = document.getElementById('row-' + id);
+      if (selected) {
+        selected.classList.remove('bg-surface-container', 'hover:bg-surface-container-high');
+        selected.classList.add('bg-secondary-container', 'text-on-secondary-fixed');
+        const indicator = selected.querySelector('.col-span-2 span:first-child');
+        if (indicator) indicator.className = 'w-1.5 h-3 bg-primary rounded-full';
+      }
+    }
+
+    // Dynamic radio feedback for dispatch button
+    const radioInputs = document.querySelectorAll('input[name="assignedMember"]');
+    radioInputs.forEach(radio => {
+      radio.addEventListener('change', (e) => {
+        document.querySelectorAll('.operator-option').forEach(el => el.classList.remove('ring-2', 'ring-primary', 'bg-surface-container-highest'));
+        const parent = e.target.closest('.operator-option');
+        if (parent) {
+          parent.classList.add('ring-2', 'ring-primary', 'bg-surface-container-highest');
+        }
+        const confirmBtn = document.getElementById('confirmAssignBtn');
+        confirmBtn.querySelector('span:last-child').textContent = 'Confirm Assignment to ' + e.target.value;
+      });
+    });
+
+    function confirmDispatch() {
+      const selected = document.querySelector('input[name="assignedMember"]:checked').value;
+      const confirmBtn = document.getElementById('confirmAssignBtn');
+      confirmBtn.classList.remove('bg-primary');
+      confirmBtn.classList.add('bg-secondary');
+      confirmBtn.innerHTML = '<span class="material-symbols-outlined text-[20px]">check_circle</span><span>Assignment Dispatched to ' + selected + '</span>';
+      
+      const timelineActive = document.getElementById('timelineActiveEvent');
+      if (timelineActive) {
+        timelineActive.innerHTML = `
+          <span class="absolute -left-4 top-1.5 w-2 h-2 rounded-full bg-secondary"></span>
+          <div class="flex items-baseline gap-space-xs">
+            <span class="font-label-telemetry-sm text-label-telemetry-sm font-mono text-secondary">JUST NOW</span>
+            <span class="font-body-sm text-body-sm font-semibold text-on-surface">Assigned to ` + selected + `</span>
+          </div>
+          <span class="font-body-sm text-body-sm text-secondary">Payload deployed; comms link established on Channel Alpine-9.</span>
+        `;
+      }
+    }
+  </script>
+</div></main></div></body></html>
