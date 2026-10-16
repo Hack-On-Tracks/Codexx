@@ -1,0 +1,10 @@
+import { request } from './api';
+export const login = (email, password) => request('/auth/login', { method: 'POST', body: { email, password } });
+export const register = (body) => request('/auth/register', { method: 'POST', body });
+export const me = () => request('/auth/me');
+export const logout = () => request('/auth/logout', { method: 'POST' });
+export const stats = () => request('/stats');
+export const listUsers = (status) => request(`/users${status ? `?approval_status=${status}` : ''}`);
+export const approveUser = (id) => request(`/users/${id}/approve`, { method: 'PATCH' });
+export const rejectUser = (id) => request(`/users/${id}/reject`, { method: 'PATCH' });
+export const setUserActive = (id, is_active) => request(`/users/${id}/status`, { method: 'PATCH', body: { is_active } });
